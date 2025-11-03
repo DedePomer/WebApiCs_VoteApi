@@ -14,7 +14,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/CandidateConfigurarion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/CandidatesConfigurarion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UserDataConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/VoteDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/VoteDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +212,7 @@
       <updated>1761974789491</updated>
       <workItem from="1761974791261" duration="716000" />
       <workItem from="1761977775452" duration="202000" />
-      <workItem from="1762186235143" duration="7915000" />
+      <workItem from="1762186235143" duration="8701000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -281,7 +286,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762195412112</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="добавил конфигурацию">
+      <option name="closed" value="true" />
+      <created>1762196933328</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1762196933328</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +321,8 @@
     <MESSAGE value="начал работать с БД (хочу попробовать EF)" />
     <MESSAGE value="добавил базовые entity" />
     <MESSAGE value="как оказалось для EF инициализавтор не нужен" />
-    <option name="LAST_COMMIT_MESSAGE" value="как оказалось для EF инициализавтор не нужен" />
+    <MESSAGE value="добавил конфигурацию" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил конфигурацию" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

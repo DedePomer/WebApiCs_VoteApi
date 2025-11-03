@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Data.DataBase.Configurations;
 
-public class UserDataConfiguration:IEntityTypeConfiguration<UsersDataEntity>
+public class UsersDataConfiguration:IEntityTypeConfiguration<UsersDataEntity>
 {
     public void Configure(EntityTypeBuilder<UsersDataEntity> builder)
     {

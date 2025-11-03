@@ -1,3 +1,6 @@
+using Data.DataBase;
+using Microsoft.EntityFrameworkCore;
+
 namespace WebAPI;
 
 public class Program
@@ -5,6 +8,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        var configuration = builder.Configuration;
 
         builder.Services.AddControllers();
         // Add services to the container.
@@ -12,9 +16,14 @@ public class Program
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddDbContext<VoteDbContext>(options =>
+            {
+                options.UseNpgsql(configuration.GetConnectionString(nameof(VoteDbContext)));
+            });
         
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-        builder.Services.AddOpenApi();
+        // builder.Services.AddOpenApi();
 
         builder.Logging.ClearProviders();
 

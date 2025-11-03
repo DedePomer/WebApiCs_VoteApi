@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Data.DataBase.Configurations;
 
-public class CandidateConfigurarion:IEntityTypeConfiguration<CandidatesEntity>
+public class CandidatesConfigurarion:IEntityTypeConfiguration<CandidatesEntity>
 {
     public void Configure(EntityTypeBuilder<CandidatesEntity> builder)
     {
