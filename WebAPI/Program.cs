@@ -17,9 +17,13 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddDbContext<VoteDbContext>(options =>
+        builder.Services.AddDbContext<VoteDbContext>(
+            options =>
             {
-                options.UseNpgsql(configuration.GetConnectionString(nameof(VoteDbContext)));
+                options
+                    .UseNpgsql(configuration
+                        .GetConnectionString(nameof(VoteDbContext)) 
+                               ?? throw new NullReferenceException());
             });
         
         // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
