@@ -16,10 +16,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApiCs_VoteApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WebApiCs_VoteApi.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,9 +73,17 @@
     <setting file="file://$PROJECT_DIR$/Data/DataBase/DbInitializer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/IDbConnectionFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/PostgreConnectionFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/Model/Entity/Candidates.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersAuth.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastucture/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -105,6 +110,12 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql_aurora"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: http">
@@ -196,7 +207,7 @@
       <updated>1761974789491</updated>
       <workItem from="1761974791261" duration="716000" />
       <workItem from="1761977775452" duration="202000" />
-      <workItem from="1762186235143" duration="2368000" />
+      <workItem from="1762186235143" duration="5273000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -246,7 +257,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762186800266</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="начал работать с БД (хочу попробовать EF)">
+      <option name="closed" value="true" />
+      <created>1762188791967</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1762188791967</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +289,8 @@
     <MESSAGE value="основная структура" />
     <MESSAGE value="+" />
     <MESSAGE value="опять всё меняю (решил работать с трёхслойкой)" />
-    <option name="LAST_COMMIT_MESSAGE" value="опять всё меняю (решил работать с трёхслойкой)" />
+    <MESSAGE value="начал работать с БД (хочу попробовать EF)" />
+    <option name="LAST_COMMIT_MESSAGE" value="начал работать с БД (хочу попробовать EF)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
