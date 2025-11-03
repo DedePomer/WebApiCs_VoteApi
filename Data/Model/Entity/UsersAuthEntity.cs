@@ -1,6 +1,6 @@
 ﻿namespace Data.Model.Entity;
 
-public class UsersAuth
+public class UsersAuthEntity
 {
     public required Guid UserId { get; init; } 
     

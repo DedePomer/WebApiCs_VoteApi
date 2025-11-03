@@ -15,8 +15,12 @@
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/DbInitializer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/IDbConnectionFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/PostgreConnectionFactory.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/Candidates.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuth.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +82,7 @@
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersData.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastucture/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
@@ -207,7 +212,7 @@
       <updated>1761974789491</updated>
       <workItem from="1761974791261" duration="716000" />
       <workItem from="1761977775452" duration="202000" />
-      <workItem from="1762186235143" duration="5273000" />
+      <workItem from="1762186235143" duration="6487000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -265,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762188791967</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="добавил базовые entity">
+      <option name="closed" value="true" />
+      <created>1762192557001</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1762192557001</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +303,8 @@
     <MESSAGE value="+" />
     <MESSAGE value="опять всё меняю (решил работать с трёхслойкой)" />
     <MESSAGE value="начал работать с БД (хочу попробовать EF)" />
-    <option name="LAST_COMMIT_MESSAGE" value="начал работать с БД (хочу попробовать EF)" />
+    <MESSAGE value="добавил базовые entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил базовые entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
