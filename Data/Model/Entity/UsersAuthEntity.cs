@@ -5,7 +5,6 @@ namespace Data.Model.Entity;
 public class UsersAuthEntity
 {
     public Guid UserId { get; init; } = Guid.NewGuid();
-    public Guid? DataId { get; set; }
     public UsersDataEntity? Data { get; set; } 
     
     [MaxLength(50)]

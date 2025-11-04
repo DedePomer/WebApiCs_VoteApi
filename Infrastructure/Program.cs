@@ -1,4 +1,4 @@
-﻿namespace Infrastucture;
+﻿namespace Infrastructure;
 
 class Program
 {

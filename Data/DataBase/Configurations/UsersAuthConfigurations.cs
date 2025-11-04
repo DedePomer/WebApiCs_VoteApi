@@ -9,10 +9,9 @@ public class UsersAuthConfigurations:IEntityTypeConfiguration<UsersAuthEntity>
     public void Configure(EntityTypeBuilder<UsersAuthEntity> builder)
     {
         builder.HasKey(e => e.UserId);
-        
+
         builder
-            .HasOne(e=>e.Data)
-            .WithOne(e=>e.User)
-            .HasForeignKey<UsersAuthEntity>(e => e.DataId);
+            .HasOne(e => e.Data)
+            .WithOne(e => e.User);
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Data.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(VoteDbContext))]
-    partial class VoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251104164807_EditEntity")]
+    partial class EditEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -92,9 +95,6 @@ namespace Data.Migrations
 
                     b.HasKey("DataId");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
                     b.ToTable("UsersData");
                 });
 
@@ -105,15 +105,14 @@ namespace Data.Migrations
                         .HasForeignKey("Data.Model.Entity.UsersAuthEntity", "UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
 
-            modelBuilder.Entity("Data.Model.Entity.UsersDataEntity", b =>
-                {
-                    b.HasOne("Data.Model.Entity.UsersAuthEntity", "User")
-                        .WithOne("Data")
-                        .HasForeignKey("Data.Model.Entity.UsersDataEntity", "UserId");
+                    b.HasOne("Data.Model.Entity.UsersDataEntity", "Data")
+                        .WithOne("User")
+                        .HasForeignKey("Data.Model.Entity.UsersAuthEntity", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("User");
+                    b.Navigation("Data");
                 });
 
             modelBuilder.Entity("Data.Model.Entity.CandidatesEntity", b =>
@@ -121,9 +120,9 @@ namespace Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Data.Model.Entity.UsersAuthEntity", b =>
+            modelBuilder.Entity("Data.Model.Entity.UsersDataEntity", b =>
                 {
-                    b.Navigation("Data");
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
