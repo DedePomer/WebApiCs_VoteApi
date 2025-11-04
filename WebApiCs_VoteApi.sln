@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastucture", "Infrastuct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{FF3A1DBB-5395-45D6-94CE-BE1CF6A115B0}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{873C82CB-F532-4D8C-9713-835A2FE17AD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{37671B73-41AB-41F8-BA45-69D391D72365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,5 +26,11 @@ Global
 		{FF3A1DBB-5395-45D6-94CE-BE1CF6A115B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF3A1DBB-5395-45D6-94CE-BE1CF6A115B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF3A1DBB-5395-45D6-94CE-BE1CF6A115B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37671B73-41AB-41F8-BA45-69D391D72365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37671B73-41AB-41F8-BA45-69D391D72365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37671B73-41AB-41F8-BA45-69D391D72365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37671B73-41AB-41F8-BA45-69D391D72365}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

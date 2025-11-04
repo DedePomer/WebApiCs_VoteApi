@@ -1,5 +1,3 @@
-using Data.DataBase;
-using Microsoft.EntityFrameworkCore;
 using WebAPI.Extensions;
 
 namespace WebAPI;
@@ -19,7 +17,7 @@ public class Program
         builder.Services.AddSwaggerGen();
 
         builder.Services.AddDataBase(configuration);
-        
+
 
         builder.Logging.ClearProviders();
 
@@ -33,12 +31,11 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-    
+
         app.UseAuthorization();
-        
+
         app.MapControllers();
 
         app.Run();
     }
 }
-
