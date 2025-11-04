@@ -13,11 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,17 +67,15 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/CandidateConfigurarion.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/UserDataConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/VoteDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastucture/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -212,7 +206,7 @@
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
       <workItem from="1762199422320" duration="742000" />
-      <workItem from="1762251965275" duration="833000" />
+      <workItem from="1762251965275" duration="1204000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -326,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762200028750</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="изменил entity">
+      <option name="closed" value="true" />
+      <created>1762252828569</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1762252828569</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,7 +358,8 @@
     <MESSAGE value="add dbcontext to di" />
     <MESSAGE value="добавил миграции" />
     <MESSAGE value="+" />
-    <option name="LAST_COMMIT_MESSAGE" value="+" />
+    <MESSAGE value="изменил entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="изменил entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

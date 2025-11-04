@@ -1,5 +1,6 @@
 using Data.DataBase;
 using Microsoft.EntityFrameworkCore;
+using WebAPI.Extensions;
 
 namespace WebAPI;
 
@@ -17,14 +18,7 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        builder.Services.AddDbContext<VoteDbContext>(
-            options =>
-            {
-                options
-                    .UseNpgsql(configuration
-                        .GetConnectionString(nameof(VoteDbContext)) 
-                               ?? throw new NullReferenceException());
-            });
+        builder.Services.AddDataBase(configuration);
         
 
         builder.Logging.ClearProviders();
@@ -47,3 +41,4 @@ public class Program
         app.Run();
     }
 }
+
