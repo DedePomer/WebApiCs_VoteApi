@@ -2,7 +2,7 @@
 
 namespace Infrastructure.Services;
 
-public class UserAuthServices(IUserAuthRepository userAuthRepository, IUserDataRepository userDataRepository)
+public class UserServices(IUserAuthRepository userAuthRepository, IUserDataRepository userDataRepository)
 {
     public async Task AddUser(string userName, string password, bool isService, string firstName, string surname)
     {

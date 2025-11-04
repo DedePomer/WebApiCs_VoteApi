@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>804</IntrospectionStateNumber>
+      <IntrospectionStateNumber>819</IntrospectionStateNumber>
       <ServerVersion>18.0</ServerVersion>
       <StartupTime>1762252025</StartupTime>
       <TimeZones>true ACDT
@@ -700,7 +700,7 @@ false posixrules
 13293||10|C|G
 13293||-9223372036854775808|U|G
 13293||10|U|G</Grants>
-      <IntrospectionStateNumber>804</IntrospectionStateNumber>
+      <IntrospectionStateNumber>819</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>admin</OwnerName>
     </database>
@@ -4265,11 +4265,11 @@ false posixrules
       <AutoIntrospectionLevel>3</AutoIntrospectionLevel>
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <LastIntrospectionL1Xid>804</LastIntrospectionL1Xid>
-      <LastIntrospectionL2Xid>804</LastIntrospectionL2Xid>
-      <LastIntrospectionL3Xid>804</LastIntrospectionL3Xid>
+      <LastIntrospectionL1Xid>819</LastIntrospectionL1Xid>
+      <LastIntrospectionL2Xid>819</LastIntrospectionL2Xid>
+      <LastIntrospectionL3Xid>819</LastIntrospectionL3Xid>
       <LastIntrospectionLevel>3</LastIntrospectionLevel>
-      <LastIntrospectionLocalTimestamp>2025-11-04.16:53:49</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-11-04.17:16:40</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>546</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -5243,7 +5243,15 @@ false posixrules
       <StoredType>varchar(400)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="441" parent="311" name="PK_Candidates">
+    <foreign-key id="441" parent="311" name="FK_Candidates_UsersAuth_CandidateId">
+      <ColNames>CandidateId</ColNames>
+      <ObjectId>16599</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <StateNumber>805</StateNumber>
+      <RefKeyColPositions>1</RefKeyColPositions>
+      <RefTableId>16514</RefTableId>
+    </foreign-key>
+    <index id="442" parent="311" name="PK_Candidates">
       <ColNames>CandidateId</ColNames>
       <ObjectId>16512</ObjectId>
       <Primary>1</Primary>
@@ -5251,47 +5259,39 @@ false posixrules
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="442" parent="311" name="PK_Candidates">
+    <key id="443" parent="311" name="PK_Candidates">
       <ObjectId>16513</ObjectId>
       <Primary>1</Primary>
       <StateNumber>783</StateNumber>
       <UnderlyingIndexId>16512</UnderlyingIndexId>
     </key>
-    <column id="443" parent="312" name="UserId">
+    <column id="444" parent="312" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>783</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
-    <column id="444" parent="312" name="UserName">
+    <column id="445" parent="312" name="UserName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>792</StateNumber>
       <StoredType>varchar(50)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="445" parent="312" name="PasswordHash">
+    <column id="446" parent="312" name="PasswordHash">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>783</StateNumber>
       <StoredType>bytea|0s</StoredType>
       <TypeId>17</TypeId>
     </column>
-    <column id="446" parent="312" name="RefreshTokenHash">
+    <column id="447" parent="312" name="RefreshTokenHash">
       <Position>4</Position>
       <StateNumber>788</StateNumber>
       <StoredType>bytea|0s</StoredType>
       <TypeId>17</TypeId>
     </column>
-    <foreign-key id="447" parent="312" name="FK_UsersAuth_Candidates_UserId">
-      <ColNames>UserId</ColNames>
-      <ObjectId>16525</ObjectId>
-      <OnDelete>cascade</OnDelete>
-      <StateNumber>783</StateNumber>
-      <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16506</RefTableId>
-    </foreign-key>
     <index id="448" parent="312" name="PK_UsersAuth">
       <ColNames>UserId</ColNames>
       <ObjectId>16523</ObjectId>
@@ -5314,8 +5314,10 @@ false posixrules
       <TypeId>2950</TypeId>
     </column>
     <column id="451" parent="313" name="UserId">
+      <DefaultExpression>&apos;00000000-0000-0000-0000-000000000000&apos;::uuid</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>798</StateNumber>
+      <StateNumber>806</StateNumber>
       <StoredType>uuid|0s</StoredType>
       <TypeId>2950</TypeId>
     </column>
@@ -5359,8 +5361,9 @@ false posixrules
     </column>
     <foreign-key id="458" parent="313" name="FK_UsersData_UsersAuth_UserId">
       <ColNames>UserId</ColNames>
-      <ObjectId>16594</ObjectId>
-      <StateNumber>802</StateNumber>
+      <ObjectId>16604</ObjectId>
+      <OnDelete>cascade</OnDelete>
+      <StateNumber>805</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16514</RefTableId>
     </foreign-key>

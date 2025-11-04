@@ -14,15 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/CandidatesConfigurarion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/CandidatesConfigurarion.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUserDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UserDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UserDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,8 +76,9 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a9ce663431c24c9aba988159f5e36465291420/6d/f45f99e9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Common/Helpers/HashHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Data/DataBase/Configurations/CandidatesConfigurarion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/VoteDbContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,7 +115,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.WebAPI: http.executor": "Debug",
+    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -234,7 +230,7 @@
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
       <workItem from="1762199422320" duration="742000" />
-      <workItem from="1762251965275" duration="15604000" />
+      <workItem from="1762251965275" duration="16388000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -412,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762275298078</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="доделал сервис + немного поменял модель">
+      <option name="closed" value="true" />
+      <created>1762275896695</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1762275896695</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +454,8 @@
     <MESSAGE value="add AddServices" />
     <MESSAGE value="добавил новый репозиторий, пытаюсь запустить post запрос" />
     <MESSAGE value="думаю над сервисом и опять поменял модель данных" />
-    <option name="LAST_COMMIT_MESSAGE" value="думаю над сервисом и опять поменял модель данных" />
+    <MESSAGE value="доделал сервис + немного поменял модель" />
+    <option name="LAST_COMMIT_MESSAGE" value="доделал сервис + немного поменял модель" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

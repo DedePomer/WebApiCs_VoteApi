@@ -1,4 +1,5 @@
 using Data.Repositories;
+using Infrastructure.Services;
 using WebAPI.Extensions;
 
 namespace WebAPI;
@@ -38,14 +39,14 @@ public class Program
 
         app.UseAuthorization();
 
-        app.MapPost("/addUser", async (IUserAuthRepository repository) =>
+        app.MapPost("/addUser", async (UserServices userServices) =>
         {
-            // await repository.AddUserAsync("DetectiveDust", "DetectiveDust", false, "Harrier", "Du Bois");
-            // await repository.AddUserAsync("CoolPrecision", "CoolPrecision", false, "Kim", "Kitsuragi");
-            // await repository.AddUserAsync("MissOrange", "MissOrange", false, "Klaasje", "Amandou");
-            // await repository.AddUserAsync("Lil'Mischief", "Lil'Mischief", false, "Cunoesse", "Vittulainen");
-            // await repository.AddUserAsync("Ex_Flame", "Ex_Flame", false, "Dora", "Ingerlund");
-            // await repository.AddUserAsync("CorporateOwl", "CorporateOwl", false, "Joyce", "Messier");
+            await userServices.AddUser("DetectiveDust", "DetectiveDust", false, "Harrier", "Du Bois");
+            await userServices.AddUser("CoolPrecision", "CoolPrecision", false, "Kim", "Kitsuragi");
+            await userServices.AddUser("MissOrange", "MissOrange", false, "Klaasje", "Amandou");
+            await userServices.AddUser("Lil'Mischief", "Lil'Mischief", false, "Cunoesse", "Vittulainen");
+            await userServices.AddUser("Ex_Flame", "Ex_Flame", false, "Dora", "Ingerlund");
+            await userServices.AddUser("CorporateOwl", "CorporateOwl", false, "Joyce", "Messier");
             
         });
         // app.MapControllers();
