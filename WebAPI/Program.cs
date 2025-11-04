@@ -22,14 +22,16 @@ public class Program
         builder.Services.AddServices(configuration);
 
 
-        builder.Logging.ClearProviders();
-
-        // builder.WebHost.UseUrls("http://localhost:5000");
+        // builder.Services.AddLogging();
+        // builder.Logging.ClearProviders();
+        
         
         var app = builder.Build();
 
         // ловит все exception проги
         app.UseExceptionMiddleware();
+        
+        app.UseHttpsRedirection();
         
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
@@ -38,10 +40,8 @@ public class Program
             app.UseSwaggerUI();
         }
 
-        app.UseHttpsRedirection();
-
         app.UseAuthorization();
-
+        
         app.MapPost("/auth",
             async (UserServices userServices, [FromBody]UserDto user) =>
             {
@@ -50,6 +50,12 @@ public class Program
                     return Results.Ok();
                 }
                 return Results.Unauthorized();
+            });
+        
+        app.MapPost("/vote",
+            async (UserServices userServices, [FromBody]int candidateNumber) =>
+            {
+                
             });
         
         app.Run();
