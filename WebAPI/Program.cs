@@ -43,11 +43,15 @@ public class Program
         app.UseAuthorization();
 
         app.MapPost("/auth",
-            async ([FromBody] UserDto user) =>
+            async (UserServices userServices, [FromBody]UserDto user) =>
             {
-                
+                if (await userServices.IsUserExist(user.UserName,user.Password))
+                {
+                    return Results.Ok();
+                }
+                return Results.Unauthorized();
             });
-
+        
         app.Run();
     }
 }

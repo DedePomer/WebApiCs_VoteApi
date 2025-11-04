@@ -14,8 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -233,7 +232,7 @@
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
       <workItem from="1762199422320" duration="742000" />
-      <workItem from="1762251965275" duration="19481000" />
+      <workItem from="1762251965275" duration="20159000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -443,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762279627014</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add IsUserExist">
+      <option name="closed" value="true" />
+      <created>1762280211174</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1762280211174</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -485,7 +492,8 @@
     <MESSAGE value="смог зарегать первых пользователей" />
     <MESSAGE value="add ExceptionMiddleware" />
     <MESSAGE value="add UserDto" />
-    <option name="LAST_COMMIT_MESSAGE" value="add UserDto" />
+    <MESSAGE value="add IsUserExist" />
+    <option name="LAST_COMMIT_MESSAGE" value="add IsUserExist" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
