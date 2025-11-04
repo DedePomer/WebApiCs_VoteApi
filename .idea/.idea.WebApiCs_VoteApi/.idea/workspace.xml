@@ -13,14 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/20251103193339_InitialCreate.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/20251103193339_InitialCreate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/UsersDataConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +211,8 @@
       <workItem from="1761974791261" duration="716000" />
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
-      <workItem from="1762199422320" duration="518000" />
+      <workItem from="1762199422320" duration="742000" />
+      <workItem from="1762251965275" duration="833000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -312,7 +310,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762198489879</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="+">
+      <option name="closed" value="true" />
+      <created>1762200012040</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1762200012040</updated>
+    </task>
+    <task id="LOCAL-00014" summary="+">
+      <option name="closed" value="true" />
+      <created>1762200028750</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1762200028750</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,7 +348,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="основная структура" />
-    <MESSAGE value="+" />
     <MESSAGE value="опять всё меняю (решил работать с трёхслойкой)" />
     <MESSAGE value="начал работать с БД (хочу попробовать EF)" />
     <MESSAGE value="добавил базовые entity" />
@@ -342,7 +355,8 @@
     <MESSAGE value="добавил конфигурацию" />
     <MESSAGE value="add dbcontext to di" />
     <MESSAGE value="добавил миграции" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил миграции" />
+    <MESSAGE value="+" />
+    <option name="LAST_COMMIT_MESSAGE" value="+" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

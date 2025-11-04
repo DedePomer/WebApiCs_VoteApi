@@ -13,7 +13,7 @@ public class UsersDataConfiguration:IEntityTypeConfiguration<UsersDataEntity>
 
         builder
             .HasOne(e => e.User)
-            .WithOne()
+            .WithOne(e=>e.Data)
             .HasForeignKey<UsersDataEntity>(e => e.UserId);
     }
 }
