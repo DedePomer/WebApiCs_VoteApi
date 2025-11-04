@@ -9,7 +9,7 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         var configuration = builder.Configuration;
 
-        builder.Services.AddControllers();
+        // builder.Services.AddControllers();
         // Add services to the container.
         builder.Services.AddAuthorization();
 
@@ -17,6 +17,7 @@ public class Program
         builder.Services.AddSwaggerGen();
 
         builder.Services.AddDataBase(configuration);
+        builder.Services.AddServices(configuration);
 
 
         builder.Logging.ClearProviders();
@@ -34,7 +35,8 @@ public class Program
 
         app.UseAuthorization();
 
-        app.MapControllers();
+        app.MapPost("\addUser", () => { });
+        // app.MapControllers();
 
         app.Run();
     }

@@ -13,15 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +81,9 @@
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastucture/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastucture/Services/UserAuthServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -224,7 +219,7 @@
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
       <workItem from="1762199422320" duration="742000" />
-      <workItem from="1762251965275" duration="8820000" />
+      <workItem from="1762251965275" duration="9279000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -362,7 +357,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762257776669</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="доделал репозиторий">
+      <option name="closed" value="true" />
+      <created>1762262202640</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1762262202640</updated>
+    </task>
+    <task id="LOCAL-00019" summary="+ сервис">
+      <option name="closed" value="true" />
+      <created>1762262251531</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1762262251531</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -395,7 +406,9 @@
     <MESSAGE value="изменил entity" />
     <MESSAGE value="add extension" />
     <MESSAGE value="add helpers" />
-    <option name="LAST_COMMIT_MESSAGE" value="add helpers" />
+    <MESSAGE value="доделал репозиторий" />
+    <MESSAGE value="+ сервис" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ сервис" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
