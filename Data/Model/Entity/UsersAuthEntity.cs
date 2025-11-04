@@ -1,12 +1,15 @@
-﻿namespace Data.Model.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Data.Model.Entity;
 
 public class UsersAuthEntity
 {
-    public required Guid UserId { get; init; } 
-    public required Guid DataId { get; init; }
-    public required UsersDataEntity Data { get; init; } 
+    public Guid UserId { get; init; } = Guid.NewGuid();
+    public Guid? DataId { get; set; }
+    public UsersDataEntity? Data { get; set; } 
     
+    [MaxLength(50)]
     public required string UserName { get; init; } 
     public required byte[] PasswordHash { get; init; } 
-    public required byte[] RefreshTokenHash { get; init; } 
+    public byte[]? RefreshTokenHash { get; set; } 
 }

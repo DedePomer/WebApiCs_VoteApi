@@ -3,6 +3,7 @@ using System;
 using Data.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(VoteDbContext))]
-    partial class VoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251104121201_EditUserData")]
+    partial class EditUserData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,8 +32,7 @@ namespace Data.Migrations
                         .HasColumnType("uuid");
 
                     b.Property<string>("Programm")
-                        .HasMaxLength(400)
-                        .HasColumnType("character varying(400)");
+                        .HasColumnType("text");
 
                     b.HasKey("CandidateId");
 
@@ -42,7 +44,7 @@ namespace Data.Migrations
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
 
-                    b.Property<Guid?>("DataId")
+                    b.Property<Guid>("DataId")
                         .HasColumnType("uuid");
 
                     b.Property<byte[]>("PasswordHash")
@@ -54,8 +56,7 @@ namespace Data.Migrations
 
                     b.Property<string>("UserName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.HasKey("UserId");
 
@@ -72,13 +73,11 @@ namespace Data.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("Description")
-                        .HasMaxLength(400)
-                        .HasColumnType("character varying(400)");
+                        .HasColumnType("text");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.Property<bool>("IsService")
                         .HasColumnType("boolean");
@@ -87,8 +86,7 @@ namespace Data.Migrations
                         .HasColumnType("bytea");
 
                     b.Property<string>("Surname")
-                        .HasMaxLength(50)
-                        .HasColumnType("character varying(50)");
+                        .HasColumnType("text");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uuid");
@@ -123,12 +121,14 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Data.Model.Entity.CandidatesEntity", b =>
                 {
-                    b.Navigation("User");
+                    b.Navigation("User")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Data.Model.Entity.UsersAuthEntity", b =>
                 {
-                    b.Navigation("Data");
+                    b.Navigation("Data")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

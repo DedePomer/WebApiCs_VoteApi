@@ -13,9 +13,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApiCs_VoteApi.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WebApiCs_VoteApi.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Data.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Data.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Migrations/VoteDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +90,7 @@
     <setting file="file://$PROJECT_DIR$/Infrastucture/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -113,7 +120,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -217,7 +224,7 @@
       <workItem from="1761977775452" duration="202000" />
       <workItem from="1762186235143" duration="10469000" />
       <workItem from="1762199422320" duration="742000" />
-      <workItem from="1762251965275" duration="5733000" />
+      <workItem from="1762251965275" duration="8820000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -347,7 +354,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762253233866</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="add helpers">
+      <option name="closed" value="true" />
+      <created>1762257776669</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1762257776669</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +394,8 @@
     <MESSAGE value="+" />
     <MESSAGE value="изменил entity" />
     <MESSAGE value="add extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="add extension" />
+    <MESSAGE value="add helpers" />
+    <option name="LAST_COMMIT_MESSAGE" value="add helpers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

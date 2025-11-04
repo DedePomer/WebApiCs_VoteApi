@@ -1,14 +1,19 @@
-﻿namespace Data.Model.Entity;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Data.Model.Entity;
 
 public class UsersDataEntity
 {
-    public required Guid DataId { get; init; } 
+    public Guid DataId { get; init; } = Guid.NewGuid();
     public required Guid UserId { get; init; } 
-    public required UsersAuthEntity User { get; init; } 
+    public UsersAuthEntity? User { get; set; } 
     
     public required bool IsService { get; init; } 
+    [MaxLength(50)]
     public required string FirstName { get; init; } 
-    public string? SecondName { get; set; } 
+    [MaxLength(50)]
+    public string? Surname { get; set; } 
+    [MaxLength(400)]
     public string? Description { get; set; } 
     public byte[]? Photo { get; set; } 
     public int? Age { get; set; } 
