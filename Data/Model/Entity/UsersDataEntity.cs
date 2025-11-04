@@ -5,7 +5,7 @@ namespace Data.Model.Entity;
 public class UsersDataEntity
 {
     public Guid DataId { get; init; } = Guid.NewGuid();
-    public required Guid UserId { get; init; } 
+    public Guid? UserId { get; set; } 
     public UsersAuthEntity? User { get; set; } 
     
     public required bool IsService { get; init; } 

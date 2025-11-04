@@ -1,3 +1,4 @@
+using Data.Repositories;
 using WebAPI.Extensions;
 
 namespace WebAPI;
@@ -22,6 +23,8 @@ public class Program
 
         builder.Logging.ClearProviders();
 
+        builder.WebHost.UseUrls("http://localhost:5000");
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -35,7 +38,16 @@ public class Program
 
         app.UseAuthorization();
 
-        app.MapPost("\addUser", () => { });
+        app.MapPost("/addUser", async (IUserAuthRepository repository) =>
+        {
+            // await repository.AddUserAsync("DetectiveDust", "DetectiveDust", false, "Harrier", "Du Bois");
+            // await repository.AddUserAsync("CoolPrecision", "CoolPrecision", false, "Kim", "Kitsuragi");
+            // await repository.AddUserAsync("MissOrange", "MissOrange", false, "Klaasje", "Amandou");
+            // await repository.AddUserAsync("Lil'Mischief", "Lil'Mischief", false, "Cunoesse", "Vittulainen");
+            // await repository.AddUserAsync("Ex_Flame", "Ex_Flame", false, "Dora", "Ingerlund");
+            // await repository.AddUserAsync("CorporateOwl", "CorporateOwl", false, "Joyce", "Messier");
+            
+        });
         // app.MapControllers();
 
         app.Run();
