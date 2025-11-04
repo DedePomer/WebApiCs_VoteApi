@@ -21,4 +21,15 @@ public class UsersAuthRepository(VoteDbContext context):IUserAuthRepository
         
         return user.UserId;
     }
+
+    public async Task<bool> IsUserExist(string userName, string password)
+    {
+        var query = context.UsersAuth.AsNoTracking();
+        
+        bool isExist = await query
+            .AnyAsync(u =>u.UserName == userName 
+                     && u.PasswordHash == HashHelper.GetHashByString(password));
+        
+        return isExist;
+    }
 }

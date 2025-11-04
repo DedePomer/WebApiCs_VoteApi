@@ -1,4 +1,6 @@
 using Infrastructure.Services;
+using Microsoft.AspNetCore.Mvc;
+using WebAPI.DTO;
 using WebAPI.Extensions;
 
 namespace WebAPI;
@@ -40,11 +42,11 @@ public class Program
 
         app.UseAuthorization();
 
-        app.MapPost("/addUser", async (UserServices userServices) =>
-        {
-            await userServices.AddUser("CorporateOwl", "CorporateOwl", false, "Joyce", "Messier");
-            throw new Exception();
-        });
+        app.MapPost("/auth",
+            async ([FromBody] UserDto user) =>
+            {
+                
+            });
 
         app.Run();
     }
