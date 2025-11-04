@@ -28,6 +28,9 @@ public class Program
         
         var app = builder.Build();
 
+        // ловит все exception проги
+        app.UseExceptionMiddleware();
+        
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
