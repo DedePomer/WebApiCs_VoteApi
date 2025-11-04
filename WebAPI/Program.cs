@@ -1,4 +1,3 @@
-using Data.Repositories;
 using Infrastructure.Services;
 using WebAPI.Extensions;
 
@@ -10,8 +9,7 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
         var configuration = builder.Configuration;
-
-        // builder.Services.AddControllers();
+        
         // Add services to the container.
         builder.Services.AddAuthorization();
 
@@ -24,7 +22,7 @@ public class Program
 
         builder.Logging.ClearProviders();
 
-        builder.WebHost.UseUrls("http://localhost:5000");
+        // builder.WebHost.UseUrls("http://localhost:5000");
         
         var app = builder.Build();
 
@@ -44,15 +42,9 @@ public class Program
 
         app.MapPost("/addUser", async (UserServices userServices) =>
         {
-            await userServices.AddUser("DetectiveDust", "DetectiveDust", false, "Harrier", "Du Bois");
-            await userServices.AddUser("CoolPrecision", "CoolPrecision", false, "Kim", "Kitsuragi");
-            await userServices.AddUser("MissOrange", "MissOrange", false, "Klaasje", "Amandou");
-            await userServices.AddUser("Lil'Mischief", "Lil'Mischief", false, "Cunoesse", "Vittulainen");
-            await userServices.AddUser("Ex_Flame", "Ex_Flame", false, "Dora", "Ingerlund");
             await userServices.AddUser("CorporateOwl", "CorporateOwl", false, "Joyce", "Messier");
-            
+            throw new Exception();
         });
-        // app.MapControllers();
 
         app.Run();
     }
