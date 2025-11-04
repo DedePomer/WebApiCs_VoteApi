@@ -7,7 +7,7 @@ namespace Data.Repositories;
 
 public class UsersAuthRepository(VoteDbContext context):IUserAuthRepository
 {
-    public async Task AddUserAsync(string userName, string password)
+    public async Task<Guid> AddUserAsync(string userName, string password)
     {
         var user = new UsersAuthEntity()
         {
@@ -18,5 +18,7 @@ public class UsersAuthRepository(VoteDbContext context):IUserAuthRepository
         
         await context.AddAsync(user);
         await context.SaveChangesAsync();
+        
+        return user.UserId;
     }
 }

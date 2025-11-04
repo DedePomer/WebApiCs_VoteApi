@@ -14,6 +14,7 @@ public class CandidatesConfigurarion:IEntityTypeConfiguration<CandidatesEntity>
         builder
             .HasOne(e=>e.User)
             .WithOne()
-            .HasForeignKey<UsersAuthEntity>(e=>e.UserId);
+            .HasForeignKey<CandidatesEntity>(e=>e.CandidateId)
+            .OnDelete(DeleteBehavior.Cascade);;
     }
 }

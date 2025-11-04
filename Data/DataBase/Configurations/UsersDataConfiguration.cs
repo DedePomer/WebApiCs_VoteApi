@@ -14,6 +14,7 @@ public class UsersDataConfiguration:IEntityTypeConfiguration<UsersDataEntity>
         builder
             .HasOne(e => e.User)
             .WithOne(e=>e.Data)
-            .HasForeignKey<UsersDataEntity>(e => e.UserId);
+            .HasForeignKey<UsersDataEntity>(e => e.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

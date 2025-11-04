@@ -4,5 +4,5 @@ namespace Data.Repositories;
 
 public interface IUserAuthRepository
 {
-    Task AddUserAsync(string userName, string password);
+    Task<Guid> AddUserAsync(string userName, string password);
 }
