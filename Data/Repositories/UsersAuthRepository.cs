@@ -41,4 +41,11 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
 
         return user.UserId;
     }
+
+    public async Task<UsersAuthEntity> GetUserByIdAsync(Guid userId)
+    {
+        var query = context.UsersAuth.AsNoTracking();
+        
+        return await query.FirstAsync(u => u.UserId == userId);
+    }
 }

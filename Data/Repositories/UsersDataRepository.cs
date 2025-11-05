@@ -1,5 +1,6 @@
 ﻿using Data.DataBase;
 using Data.Model.Entity;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
@@ -17,5 +18,12 @@ public class UsersDataRepository(VoteDbContext context) : IUsersDataRepository
 
         await context.AddAsync(data);
         await context.SaveChangesAsync();
+    }
+
+    public Task<UsersDataEntity> GetDataByUserIdAsync(Guid userId)
+    {
+        var query = context.UsersData.AsNoTracking();
+        
+        return query.FirstAsync(d=> d.UserId == userId);
     }
 }
