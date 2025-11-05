@@ -46,7 +46,7 @@ public class Program
         app.UseAuthorization();
         
         app.MapPost("/auth",
-            async ( CandidatesService candidatesService,UsersServices usersServices, [FromBody]UserDto user) =>
+            async ( UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
@@ -57,9 +57,11 @@ public class Program
                 {
                     if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))
                     {
-                        return Results
-                            .Ok(CandidateMapper
-                                .ToDto(await candidatesService.GetCandidatesAsync()));
+                        // return Results
+                        //     .Ok(CandidateMapper
+                        //         .ToDto(await candidatesService.GetCandidatesAsync()));
+                        
+                        return Results.Ok();
                     }
                     return Results.Ok("You voted");
                 }
@@ -67,7 +69,7 @@ public class Program
             });
         
         app.MapPost("/vote",
-            async (UsersServices usersServices, [FromBody]int candidateNumber) =>
+            async (CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
             {
                 
             });

@@ -5,7 +5,7 @@ using Infrastructure.Mappers;
 
 namespace Infrastructure.Services;
 
-public class CandidatesService(ICandidatesRepository candidatesRepository, IUsersAuthRepository usersAuthRepository, IUsersDataRepository  usersDataRepository)
+public class CandidatesService(ICandidatesRepository candidatesRepository, IUsersAuthRepository usersAuthRepository, IUsersDataRepository usersDataRepository)
 {
     private async Task<List<CandidateDataType>> FillInformation(List<CandidatesEntity> candidatesEntity)
     {
