@@ -2,19 +2,24 @@
 
 namespace Infrastructure.Services;
 
-public class UserServices(IUserAuthRepository userAuthRepository, IUserDataRepository userDataRepository)
+public class UserServices(IUsersAuthRepository usersAuthRepository, IUsersDataRepository usersDataRepository, IVotesRepository votesRepository)
 {
     public async Task AddUser(string userName, string password, bool isService, string firstName, string surname)
     {
-        var userId = await userAuthRepository.AddUserAsync(userName, password);
-        await userDataRepository.AddUserDataAsync(isService, firstName, surname, userId);
+        var userId = await usersAuthRepository.AddUserAsync(userName, password);
+        await usersDataRepository.AddUserDataAsync(isService, firstName, surname, userId);
     }
 
-    public async Task<bool> IsUserExist(string? userName, string? password)
+    public async Task<bool> IsUserExist(string userName, string password)
     {
-        if ((userName != string.Empty && password != string.Empty) && (userName != null && password != null))
+        return await usersAuthRepository.IsUserExist(userName, password);
+    }
+    
+    public async Task<bool> UserCanVote(string userName, string password)
+    {
+        if (await IsUserExist(userName,password))
         {
-            return await userAuthRepository.IsUserExist(userName, password);
+            Guid userId = await usersAuthRepository.GetUserId(userName);
         }
         return false;
     }

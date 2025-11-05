@@ -3,7 +3,7 @@ using Data.Model.Entity;
 
 namespace Data.Repositories;
 
-public class UserDataRepository(VoteDbContext context) : IUserDataRepository
+public class UsersDataRepository(VoteDbContext context) : IUsersDataRepository
 {
     public async Task AddUserDataAsync(bool isService, string firstName, string surname, Guid userId)
     {

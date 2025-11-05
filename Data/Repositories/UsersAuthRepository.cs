@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
 
-public class UsersAuthRepository(VoteDbContext context):IUserAuthRepository
+public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
 {
     public async Task<Guid> AddUserAsync(string userName, string password)
     {
@@ -31,5 +31,14 @@ public class UsersAuthRepository(VoteDbContext context):IUserAuthRepository
                      && u.PasswordHash == HashHelper.GetHashByString(password));
         
         return isExist;
+    }
+
+    public async Task<Guid> GetUserId(string userName)
+    {
+        var query = context.UsersAuth.AsNoTracking();
+
+        UsersAuthEntity user = await query.FirstAsync(u => u.UserName == userName);
+
+        return user.UserId;
     }
 }

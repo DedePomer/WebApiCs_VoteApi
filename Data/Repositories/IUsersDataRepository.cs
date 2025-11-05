@@ -1,6 +1,6 @@
 ﻿namespace Data.Repositories;
 
-public interface IUserDataRepository
+public interface IUsersDataRepository
 {
     Task AddUserDataAsync(bool isService, string firstName, string surname, Guid userId);
 }

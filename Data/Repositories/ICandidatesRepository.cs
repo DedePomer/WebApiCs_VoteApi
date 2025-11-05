@@ -1,6 +1,6 @@
 ﻿namespace Data.Repositories;
 
-public interface ICandidateRepository
+public interface ICandidatesRepository
 {
     
 }

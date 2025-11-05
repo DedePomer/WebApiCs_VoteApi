@@ -7,8 +7,8 @@ public static class ServicesExtensions
 {
     public static void AddServices(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddScoped<IUserAuthRepository, UsersAuthRepository>();
-        services.AddScoped<IUserDataRepository, UserDataRepository>();
+        services.AddScoped<IUsersAuthRepository, UsersAuthRepository>();
+        services.AddScoped<IUsersDataRepository, UsersDataRepository>();
         services.AddScoped<UserServices>();
     }
 }
