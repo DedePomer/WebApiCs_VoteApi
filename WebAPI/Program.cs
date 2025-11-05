@@ -44,26 +44,26 @@ public class Program
         app.UseAuthorization();
         
         app.MapPost("/auth",
-            async (UserServices userServices, [FromBody]UserDto user) =>
+            async (UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
                     return Results.BadRequest("Validation failed");
                 }
 
-                if (await userServices.IsUserExist(user.UserName!,user.Password!))
+                if (await usersServices.IsUserExist(user.UserName!,user.Password!))
                 {
-                    if (await userServices.UserCanVote(user.UserName!,user.Password!))
+                    if (await usersServices.UserCanVote(user.UserName!,user.Password!))
                     {
                         return Results.Ok();
                     }
-                    return Results.Ok("вы уже проголосовали");
+                    return Results.Ok("You voted");
                 }
                 return Results.Unauthorized();
             });
         
         app.MapPost("/vote",
-            async (UserServices userServices, [FromBody]int candidateNumber) =>
+            async (UsersServices usersServices, [FromBody]int candidateNumber) =>
             {
                 
             });
