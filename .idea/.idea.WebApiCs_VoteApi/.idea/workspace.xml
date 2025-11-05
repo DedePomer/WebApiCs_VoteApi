@@ -12,14 +12,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-    </list>
+    <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +88,7 @@
     <setting file="file://$PROJECT_DIR$/Infrastructure/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Extensions/ServicesExtensions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -241,7 +235,7 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="7511000" />
+      <workItem from="1762345830366" duration="8388000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -531,7 +525,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762352949857</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="данные получены">
+      <option name="closed" value="true" />
+      <created>1762353460074</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1762353460074</updated>
+    </task>
+    <task id="LOCAL-00038" summary="+">
+      <option name="closed" value="true" />
+      <created>1762353537423</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1762353537423</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -552,7 +562,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="добавил конфигурацию" />
     <MESSAGE value="add dbcontext to di" />
     <MESSAGE value="добавил миграции" />
     <MESSAGE value="изменил entity" />
@@ -569,7 +578,6 @@
     <MESSAGE value="add UserDto" />
     <MESSAGE value="add IsUserExist" />
     <MESSAGE value="аунтификация заработала" />
-    <MESSAGE value="+" />
     <MESSAGE value="add votesentity" />
     <MESSAGE value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
     <MESSAGE value="+ migrations" />
@@ -577,7 +585,9 @@
     <MESSAGE value="add null validator" />
     <MESSAGE value="сделал candidaterepository" />
     <MESSAGE value="всегда выдаёт you voted" />
-    <option name="LAST_COMMIT_MESSAGE" value="всегда выдаёт you voted" />
+    <MESSAGE value="данные получены" />
+    <MESSAGE value="+" />
+    <option name="LAST_COMMIT_MESSAGE" value="+" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
