@@ -1,3 +1,4 @@
+using Data.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using MiniValidation;
@@ -44,7 +45,7 @@ public class Program
         app.UseAuthorization();
         
         app.MapPost("/auth",
-            async (UsersServices usersServices, [FromBody]UserDto user) =>
+            async (ICandidatesRepository candidatesRepository, UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
@@ -55,7 +56,7 @@ public class Program
                 {
                     if (await usersServices.UserCanVote(user.UserName!,user.Password!))
                     {
-                        return Results.Ok();
+                        return Results.Ok(candidatesRepository.GetCandidates());
                     }
                     return Results.Ok("You voted");
                 }
