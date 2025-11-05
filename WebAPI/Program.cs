@@ -78,9 +78,15 @@ public class Program
 
         // обновление refresh token
         app.MapPost("/refresh-token" ,
-                async ([FromBody] string refreshToken) =>
+                async ([FromBody]UserRefreshTokenDto user) =>
                 {
-                    
+                    MiniValidator.TryValidateAsync();
+                    if (await !MiniValidator.TryValidate(user, out var errors))
+                    {
+                        return Results.BadRequest("Validation failed");
+                    }
+
+                    return Results.Ok();
                 });
         
         // проголосовать
