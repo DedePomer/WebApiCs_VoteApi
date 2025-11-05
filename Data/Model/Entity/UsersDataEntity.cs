@@ -12,9 +12,9 @@ public class UsersDataEntity
     [MaxLength(50)]
     public required string FirstName { get; init; } 
     [MaxLength(50)]
-    public string? Surname { get; set; } 
+    public string? Surname { get; init; } 
     [MaxLength(400)]
-    public string? Description { get; set; } 
-    public byte[]? Photo { get; set; } 
-    public int? Age { get; set; } 
+    public string? Description { get; init; } 
+    public byte[]? Photo { get; init; } 
+    public int? Age { get; init; } 
 }

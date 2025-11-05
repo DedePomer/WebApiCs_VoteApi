@@ -10,7 +10,7 @@ public class CandidatesEntity
     public List<VotesEntity>? Votes { get; init; }
     
     [MaxLength(400)]
-    public string? Program { get; set; } 
+    public string? Program { get; init; } 
     
     
 }
