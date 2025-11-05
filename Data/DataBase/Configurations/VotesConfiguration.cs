@@ -16,5 +16,10 @@ public class VotesConfiguration:IEntityTypeConfiguration<VotesEntity>
             .WithMany(c=>c.Votes)
             .HasForeignKey(v=>v.CandidateId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+            .HasOne(v => v.User)
+            .WithOne()
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

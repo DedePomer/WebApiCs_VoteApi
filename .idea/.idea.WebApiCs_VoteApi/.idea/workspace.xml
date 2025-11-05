@@ -14,14 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/VotesEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/VotesEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/ICandidateRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUserDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UserDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/VotesConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/VotesConfiguration.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +232,7 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="3863000" />
+      <workItem from="1762345830366" duration="4157000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -481,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762347757021</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)">
+      <option name="closed" value="true" />
+      <created>1762349762196</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1762349762196</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +527,8 @@
     <MESSAGE value="аунтификация заработала" />
     <MESSAGE value="+" />
     <MESSAGE value="add votesentity" />
-    <option name="LAST_COMMIT_MESSAGE" value="add votesentity" />
+    <MESSAGE value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

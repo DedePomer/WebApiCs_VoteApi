@@ -9,6 +9,7 @@ public static class ServicesExtensions
     {
         services.AddScoped<IUsersAuthRepository, UsersAuthRepository>();
         services.AddScoped<IUsersDataRepository, UsersDataRepository>();
+        services.AddScoped<IVotesRepository,VotesRepository>();
         services.AddScoped<UserServices>();
     }
 }
