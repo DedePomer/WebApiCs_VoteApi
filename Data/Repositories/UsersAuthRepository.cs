@@ -11,7 +11,7 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
     {
         var user = new UsersAuthEntity()
         {
-            UserName = userName,
+            Username = userName,
             PasswordHash = HashHelper.GetHashByString(password),
         };
         
@@ -27,7 +27,7 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
         var query = context.UsersAuth.AsNoTracking();
         
         bool isExist = await query
-            .AnyAsync(u =>u.UserName == userName 
+            .AnyAsync(u =>u.Username == userName 
                      && u.PasswordHash == HashHelper.GetHashByString(password));
         
         return isExist;
@@ -37,7 +37,7 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
     {
         var query = context.UsersAuth.AsNoTracking();
 
-        UsersAuthEntity user = await query.FirstAsync(u => u.UserName == userName);
+        UsersAuthEntity user = await query.FirstAsync(u => u.Username == userName);
 
         return user.UserId;
     }
