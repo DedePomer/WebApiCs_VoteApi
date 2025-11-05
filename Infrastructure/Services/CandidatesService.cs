@@ -4,7 +4,7 @@ namespace Infrastructure.Services;
 
 public class CandidatesService(ICandidatesRepository candidatesRepository)
 {
-    // public async Task<List<>> GetCandidates()
+    // public async Task<List<>> GetCandidatesAsync()
     // {
     //     
     //     

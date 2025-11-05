@@ -52,11 +52,11 @@ public class Program
                     return Results.BadRequest("Validation failed");
                 }
 
-                if (await usersServices.IsUserExist(user.UserName!,user.Password!))
+                if (await usersServices.IsUserExistAsync(user.UserName!,user.Password!))
                 {
-                    if (await usersServices.UserCanVote(user.UserName!,user.Password!))
+                    if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))
                     {
-                        return Results.Ok(candidatesRepository.GetCandidates());
+                        return Results.Ok(await candidatesRepository.GetCandidates());
                     }
                     return Results.Ok("You voted");
                 }

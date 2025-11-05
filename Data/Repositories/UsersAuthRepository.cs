@@ -22,7 +22,7 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
         return user.UserId;
     }
 
-    public async Task<bool> IsUserExist(string userName, string password)
+    public async Task<bool> IsUserExistAsync(string userName, string password)
     {
         var query = context.UsersAuth.AsNoTracking();
         
@@ -33,7 +33,7 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
         return isExist;
     }
 
-    public async Task<Guid> GetUserId(string userName)
+    public async Task<Guid> GetUserIdAsync(string userName)
     {
         var query = context.UsersAuth.AsNoTracking();
 

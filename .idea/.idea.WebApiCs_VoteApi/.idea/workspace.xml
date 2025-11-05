@@ -14,6 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +100,7 @@
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Extensions/ServicesExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -236,7 +241,7 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="6780000" />
+      <workItem from="1762345830366" duration="7511000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -518,7 +523,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762351841293</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="всегда выдаёт you voted">
+      <option name="closed" value="true" />
+      <created>1762352949857</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1762352949857</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -539,7 +552,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="как оказалось для EF инициализавтор не нужен" />
     <MESSAGE value="добавил конфигурацию" />
     <MESSAGE value="add dbcontext to di" />
     <MESSAGE value="добавил миграции" />
@@ -564,7 +576,8 @@
     <MESSAGE value="UserCanVote сделан" />
     <MESSAGE value="add null validator" />
     <MESSAGE value="сделал candidaterepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал candidaterepository" />
+    <MESSAGE value="всегда выдаёт you voted" />
+    <option name="LAST_COMMIT_MESSAGE" value="всегда выдаёт you voted" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

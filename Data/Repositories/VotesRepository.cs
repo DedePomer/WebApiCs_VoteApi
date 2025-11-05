@@ -5,12 +5,12 @@ namespace Data.Repositories;
 
 public class VotesRepository(VoteDbContext context) : IVotesRepository
 {
-    public async Task<bool> IsUserContains(Guid userId)
+    public async Task<bool> IsUserVotedAsync(Guid userId)
     {
         var query = context.Votes.AsNoTracking();
         
-        bool isContains = await query.AnyAsync(v=>v.UserId == userId);
+        bool isVote = await query.AnyAsync(v=>v.UserId == userId);
         
-        return isContains;
+        return isVote;
     }
 }

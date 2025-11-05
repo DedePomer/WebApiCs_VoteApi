@@ -2,5 +2,5 @@
 
 public interface IVotesRepository
 {
-    Task<bool> IsUserContains(Guid userId);
+    Task<bool> IsUserVotedAsync(Guid userId);
 }
