@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using MiniValidation;
 using WebAPI.DTO;
 using WebAPI.Extensions;
+using WebAPI.Mappers;
 
 namespace WebAPI;
 
@@ -45,7 +46,7 @@ public class Program
         app.UseAuthorization();
         
         app.MapPost("/auth",
-            async (ICandidatesRepository candidatesRepository, UsersServices usersServices, [FromBody]UserDto user) =>
+            async ( CandidatesService candidatesService,UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
@@ -56,7 +57,9 @@ public class Program
                 {
                     if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))
                     {
-                        return Results.Ok(await candidatesRepository.GetCandidatesAsync());
+                        return Results
+                            .Ok(CandidateMapper
+                                .ToDto(await candidatesService.GetCandidatesAsync()));
                     }
                     return Results.Ok("You voted");
                 }

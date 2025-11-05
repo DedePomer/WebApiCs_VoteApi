@@ -9,7 +9,7 @@ public static class CandidateMapper
     {
         return new CandidateDataType()
         {
-            User = UserAuthMapper.ToDataTypes(entity.User!),
+            User = UserAuthMapper.ToDataTypes(entity.User),
             Program = entity.Program,
         };
     }

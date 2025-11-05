@@ -7,11 +7,11 @@ public static class UserAuthMapper
 {
     public static UserAuthDataType ToDataTypes(UsersAuthEntity entity)
     {
+
         return new UserAuthDataType()
         {
             Username = entity.Username,
             RefreshTokenHash = entity.RefreshTokenHash,
-            Data = UserDataMapper.ToDataTypes(entity.Data!),
         };
     }
 }
