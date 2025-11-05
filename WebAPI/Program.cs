@@ -45,9 +45,13 @@ public class Program
         app.MapPost("/auth",
             async (UserServices userServices, [FromBody]UserDto user) =>
             {
-                if (await userServices.IsUserExist(user.UserName,user.Password))
+                if (await userServices.IsUserExist(user.UserName!,user.Password!))
                 {
-                    return Results.Ok();
+                    if (await userServices.UserCanVote(user.UserName!,user.Password!))
+                    {
+                        return Results.Ok();
+                    }
+                    return Results.Ok("вы уже проголосовали");
                 }
                 return Results.Unauthorized();
             });

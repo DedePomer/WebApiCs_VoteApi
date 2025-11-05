@@ -17,11 +17,8 @@ public class UserServices(IUsersAuthRepository usersAuthRepository, IUsersDataRe
     
     public async Task<bool> UserCanVote(string userName, string password)
     {
-        if (await IsUserExist(userName,password))
-        {
-            Guid userId = await usersAuthRepository.GetUserId(userName);
-        }
-        return false;
+        Guid userId = await usersAuthRepository.GetUserId(userName);
+        return await votesRepository.IsUserContains(userId);
     }
 }
     

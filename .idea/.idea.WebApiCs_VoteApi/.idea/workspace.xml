@@ -13,9 +13,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBase/Configurations/VotesConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBase/Configurations/VotesConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,11 +88,12 @@
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IUsersDataRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Data/Repositories/UsersesAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/UserServices.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Extensions/ServicesExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -232,7 +235,7 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="4157000" />
+      <workItem from="1762345830366" duration="4599000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -482,7 +485,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762349762196</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="+ migrations">
+      <option name="closed" value="true" />
+      <created>1762350070070</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1762350070070</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,7 +514,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="основная структура" />
     <MESSAGE value="опять всё меняю (решил работать с трёхслойкой)" />
     <MESSAGE value="начал работать с БД (хочу попробовать EF)" />
     <MESSAGE value="добавил базовые entity" />
@@ -528,7 +538,8 @@
     <MESSAGE value="+" />
     <MESSAGE value="add votesentity" />
     <MESSAGE value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
+    <MESSAGE value="+ migrations" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ migrations" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
