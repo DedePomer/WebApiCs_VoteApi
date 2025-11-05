@@ -20,5 +20,9 @@ public class UsersServices(IUsersAuthRepository usersAuthRepository, IUsersDataR
         Guid userId = await usersAuthRepository.GetUserIdAsync(userName);
         return !(await votesRepository.IsUserVotedAsync(userId));
     }
+    public async Task SetRefreshToken(string username, string refreshToken)
+    {
+        await usersAuthRepository.SetRefreshToken(username, refreshToken);
+    }
 }
     

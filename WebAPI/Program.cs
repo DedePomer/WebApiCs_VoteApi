@@ -1,3 +1,4 @@
+using System.Net;
 using Data.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +16,11 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         var configuration = builder.Configuration;
         
-        // Add services to the container.
-        builder.Services.AddAuth(configuration);
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
+        builder.Services.AddAuth(configuration);
         builder.Services.AddDataBase(configuration);
         builder.Services.AddServices(configuration);
 
@@ -46,7 +46,8 @@ public class Program
         app.UseAuthorization();
         app.UseAuthentication();
         
-        app.MapPost("/auth",
+        // аунтификация
+        app.MapPost("/login",
             async (JwtService jwtService, UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
@@ -63,19 +64,34 @@ public class Program
                         //         .ToDto(await candidatesService.GetCandidatesAsync()));
                         var userDataType = UserAuthMapper.ToDataType(user);
                         
+                        var refreshToken = jwtService.GenerateRefreshToken(userDataType);
+                        var accessToken = jwtService.GenerateAccessToken(userDataType);
                         
-                        return Results.Ok(jwtService.GenerateAccessToken(userDataType));
+                        await usersServices.SetRefreshToken(user.UserName!,  refreshToken);
+                        
+                        return Results.Ok(new {accessToken,refreshToken});
                     }
                     return Results.Ok("You voted");
                 }
                 return Results.Unauthorized();
             });
+
+        // обновление refresh token
+        app.MapPost("/refresh-token" ,
+                async ([FromBody] string refreshToken) =>
+                {
+                    
+                });
         
-        app.MapPost("/vote",
-            async (CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
-            {
-                
-            });
+        // проголосовать
+        // app.MapPost("/vote",
+        //     async (CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
+        //     {
+        //         
+        //     })
+        // .RequireAuthorization(policy => 
+        //     policy.AddAuthenticationSchemes("AccessScheme")
+        //         .RequireAuthenticatedUser());
         
         app.Run();
     }

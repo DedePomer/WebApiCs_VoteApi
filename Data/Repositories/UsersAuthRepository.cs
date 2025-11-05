@@ -48,4 +48,15 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
         
         return await query.FirstAsync(u => u.UserId == userId);
     }
+
+    public async Task SetRefreshToken(string username, string refreshToken)
+    {
+        var query = context.UsersAuth;
+        
+        var user = await query.FirstAsync(u => u.Username == username);
+        
+        user.RefreshTokenHash =  HashHelper.GetHashByString(refreshToken);
+
+       await context.SaveChangesAsync();
+    }
 }

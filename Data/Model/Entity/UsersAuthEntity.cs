@@ -10,5 +10,5 @@ public class UsersAuthEntity
     [MaxLength(50)]
     public required string Username { get; init; } 
     public required byte[] PasswordHash { get; init; } 
-    public byte[]? RefreshTokenHash { get; init; } 
+    public byte[]? RefreshTokenHash { get; set; } 
 }

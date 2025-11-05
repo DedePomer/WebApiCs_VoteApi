@@ -8,4 +8,5 @@ public interface IUsersAuthRepository
     Task<bool> IsUserExistAsync(string userName, string password);
     Task<Guid> GetUserIdAsync(string userName);
     Task<UsersAuthEntity> GetUserByIdAsync(Guid userId);
+    Task SetRefreshToken(string username, string refreshToken);
 }
