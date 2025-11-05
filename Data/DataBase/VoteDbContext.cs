@@ -9,12 +9,14 @@ public class VoteDbContext(DbContextOptions<VoteDbContext> options): DbContext(o
     public DbSet<UsersAuthEntity>  UsersAuth { get; set; }
     public DbSet<UsersDataEntity>  UsersData { get; set; }
     public DbSet<CandidatesEntity>  Candidates { get; set; }
+    public DbSet<VotesEntity>  Votes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new UsersAuthConfigurations());
         modelBuilder.ApplyConfiguration(new UsersDataConfiguration());
         modelBuilder.ApplyConfiguration(new CandidatesConfigurarion());
+        modelBuilder.ApplyConfiguration(new VotesConfiguration());
         
         base.OnModelCreating(modelBuilder);
     }

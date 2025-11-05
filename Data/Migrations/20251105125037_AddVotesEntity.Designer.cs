@@ -3,6 +3,7 @@ using System;
 using Data.DataBase;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Data.Migrations
 {
     [DbContext(typeof(VoteDbContext))]
-    partial class VoteDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251105125037_AddVotesEntity")]
+    partial class AddVotesEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,20 +28,13 @@ namespace Data.Migrations
             modelBuilder.Entity("Data.Model.Entity.CandidatesEntity", b =>
                 {
                     b.Property<Guid>("CandidateId")
-                        .ValueGeneratedOnAdd()
                         .HasColumnType("uuid");
 
                     b.Property<string>("Program")
                         .HasMaxLength(400)
                         .HasColumnType("character varying(400)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uuid");
-
                     b.HasKey("CandidateId");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
 
                     b.ToTable("Candidates");
                 });
@@ -125,7 +121,7 @@ namespace Data.Migrations
                 {
                     b.HasOne("Data.Model.Entity.UsersAuthEntity", "User")
                         .WithOne()
-                        .HasForeignKey("Data.Model.Entity.CandidatesEntity", "UserId")
+                        .HasForeignKey("Data.Model.Entity.CandidatesEntity", "CandidateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -146,17 +142,12 @@ namespace Data.Migrations
             modelBuilder.Entity("Data.Model.Entity.VotesEntity", b =>
                 {
                     b.HasOne("Data.Model.Entity.CandidatesEntity", "Candidate")
-                        .WithMany("Votes")
+                        .WithMany()
                         .HasForeignKey("CandidateId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Candidate");
-                });
-
-            modelBuilder.Entity("Data.Model.Entity.CandidatesEntity", b =>
-                {
-                    b.Navigation("Votes");
                 });
 
             modelBuilder.Entity("Data.Model.Entity.UsersAuthEntity", b =>

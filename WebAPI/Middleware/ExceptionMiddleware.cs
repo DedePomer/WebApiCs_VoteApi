@@ -12,7 +12,10 @@ public class ExceptionMiddleware(RequestDelegate next, ILogger<ExceptionMiddlewa
         }
         catch (Exception ex)
         {
+#if DEBUG
             logger.LogError(ex.Message);
+#endif
+            
             
             context.Response.StatusCode = 500;   
             await context.Response.WriteAsJsonAsync("Server error");

@@ -9,12 +9,12 @@ public class CandidatesConfigurarion:IEntityTypeConfiguration<CandidatesEntity>
     public void Configure(EntityTypeBuilder<CandidatesEntity> builder)
     {
         builder
-            .HasKey(e => e.CandidateId);
+            .HasKey(c => c.CandidateId);
         
         builder
             .HasOne(e=>e.User)
             .WithOne()
-            .HasForeignKey<CandidatesEntity>(e=>e.CandidateId)
-            .OnDelete(DeleteBehavior.Cascade);;
+            .HasForeignKey<CandidatesEntity>(e=>e.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
