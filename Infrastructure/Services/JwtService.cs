@@ -7,24 +7,47 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Services;
 
-public class JwtService(IOptions<JwtOptions> options)
+public class JwtService
 {
-    public string GenerateToken(UserAuthDataType userAuthData)
+    private readonly JwtOptions _accessTokenOptions;
+    private readonly JwtOptions _refreshTokenOptions;
+    
+    public JwtService(IOptionsMonitor<JwtOptions> options)
     {
-        var claims = new List<Claim>
-        {
-            new Claim("username", userAuthData.Username)
-        };
-        
+        _accessTokenOptions = options.Get("AccessToken");
+        _refreshTokenOptions = options.Get("RefreshToken");
+    }
+
+    private string GenerateToken(Claim[] claims, JwtOptions options)
+    {
         var creds = new SigningCredentials(
-            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Value.Secretkey)),
+            new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Secretkey)),
             SecurityAlgorithms.HmacSha256);
         
         var token = new JwtSecurityToken(
             claims: claims,
-            expires: DateTime.UtcNow.Add(options.Value.Expire),
+            expires: DateTime.UtcNow.Add(options.Expire),
             signingCredentials: creds);
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
+    
+    
+    public string GenerateAccessToken(UserAuthDataType userAuthData)
+    {
+        return GenerateToken(new  Claim[]
+        {
+            new Claim("username", userAuthData.Username)
+        }, _accessTokenOptions);
+    }
+    
+    public string GenerateRefreshToken(UserAuthDataType userAuthData)
+    {
+        return GenerateToken(new  Claim[]
+        {
+            new Claim("username", userAuthData.Username)
+        }, _refreshTokenOptions);
+    }
+
+   
 }

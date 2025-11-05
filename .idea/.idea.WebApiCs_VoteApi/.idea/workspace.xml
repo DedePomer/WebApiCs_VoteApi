@@ -14,10 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +112,7 @@
     <setting file="file://$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -253,7 +252,7 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="15044000" />
+      <workItem from="1762345830366" duration="15770000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -599,7 +598,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762366515842</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="add jwtservice">
+      <option name="closed" value="true" />
+      <created>1762368613264</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1762368613264</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +627,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="доделал репозиторий" />
     <MESSAGE value="+ сервис" />
     <MESSAGE value="add AddServices" />
     <MESSAGE value="добавил новый репозиторий, пытаюсь запустить post запрос" />
@@ -645,7 +651,8 @@
     <MESSAGE value="add mappers" />
     <MESSAGE value="доделал CandidatesService" />
     <MESSAGE value="вроде сервис работает" />
-    <option name="LAST_COMMIT_MESSAGE" value="вроде сервис работает" />
+    <MESSAGE value="add jwtservice" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jwtservice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
