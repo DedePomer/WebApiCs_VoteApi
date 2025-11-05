@@ -16,7 +16,7 @@ public class Program
         var configuration = builder.Configuration;
         
         // Add services to the container.
-        builder.Services.AddAuthorization();
+        builder.Services.AddAuth(configuration);
 
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
@@ -44,9 +44,10 @@ public class Program
         }
 
         app.UseAuthorization();
+        app.UseAuthentication();
         
         app.MapPost("/auth",
-            async ( UsersServices usersServices, [FromBody]UserDto user) =>
+            async (JwtService jwtService, UsersServices usersServices, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
@@ -60,8 +61,10 @@ public class Program
                         // return Results
                         //     .Ok(CandidateMapper
                         //         .ToDto(await candidatesService.GetCandidatesAsync()));
+                        var userDataType = UserAuthMapper.ToDataType(user);
                         
-                        return Results.Ok();
+                        
+                        return Results.Ok(jwtService.GenerateAccessToken(userDataType));
                     }
                     return Results.Ok("You voted");
                 }
