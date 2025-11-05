@@ -1,5 +1,6 @@
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
+using MiniValidation;
 using WebAPI.DTO;
 using WebAPI.Extensions;
 
@@ -45,6 +46,11 @@ public class Program
         app.MapPost("/auth",
             async (UserServices userServices, [FromBody]UserDto user) =>
             {
+                if (!MiniValidator.TryValidate(user, out var errors))
+                {
+                    return Results.BadRequest("Validation failed");
+                }
+
                 if (await userServices.IsUserExist(user.UserName!,user.Password!))
                 {
                     if (await userServices.UserCanVote(user.UserName!,user.Password!))
