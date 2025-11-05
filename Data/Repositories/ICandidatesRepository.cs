@@ -4,5 +4,5 @@ namespace Data.Repositories;
 
 public interface ICandidatesRepository
 {
-    Task<List<CandidatesEntity>> GetCandidates();
+    Task<List<CandidatesEntity>> GetCandidatesAsync();
 }

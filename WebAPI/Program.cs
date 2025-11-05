@@ -56,7 +56,7 @@ public class Program
                 {
                     if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))
                     {
-                        return Results.Ok(await candidatesRepository.GetCandidates());
+                        return Results.Ok(await candidatesRepository.GetCandidatesAsync());
                     }
                     return Results.Ok("You voted");
                 }

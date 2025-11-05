@@ -6,7 +6,7 @@ namespace Data.Repositories;
 
 public class CandidatesRepository(VoteDbContext context) : ICandidatesRepository
 {
-    public async Task<List<CandidatesEntity>> GetCandidates()
+    public async Task<List<CandidatesEntity>> GetCandidatesAsync()
     {
         var query = context.Candidates.AsNoTracking();
         
