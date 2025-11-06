@@ -32,7 +32,18 @@ public class UsersAuthRepository(VoteDbContext context):IUsersAuthRepository
         
         return isExist;
     }
+    
+    public async Task<bool> IsUserExistAsync(string username)
+    {
+        var query = context.UsersAuth.AsNoTracking();
+        
+        bool isExist = await query
+            .AnyAsync(u =>u.Username == username);
+        
+        return isExist;
+    }
 
+    
     public async Task<Guid> GetUserIdAsync(string userName)
     {
         var query = context.UsersAuth.AsNoTracking();

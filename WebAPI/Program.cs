@@ -80,10 +80,9 @@ public class Program
         app.MapPost("/refresh-token" ,
                 async ([FromBody]UserRefreshTokenDto user) =>
                 {
-                    MiniValidator.TryValidateAsync();
-                    if (await !MiniValidator.TryValidate(user, out var errors))
+                    if (!MiniValidator.TryValidate(user, out var errors))
                     {
-                        return Results.BadRequest("Validation failed");
+                        return Results.BadRequest("Null field");
                     }
 
                     return Results.Ok();

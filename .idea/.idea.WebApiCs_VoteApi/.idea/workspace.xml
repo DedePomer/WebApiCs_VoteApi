@@ -14,11 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -138,34 +135,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
-    ".NET Launch Settings Profile.WebAPI: https.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "dev",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CodeLensConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.WebAPI: https.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql",
-      "mysql_aurora"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;,
+      &quot;mysql_aurora&quot;
     ],
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "C#"
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;C#&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: https">
     <configuration name="Data" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -260,7 +257,8 @@
       <workItem from="1762251965275" duration="21185000" />
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
-      <workItem from="1762345830366" duration="18630000" />
+      <workItem from="1762345830366" duration="18847000" />
+      <workItem from="1762388605360" duration="455000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -630,7 +628,23 @@
       <option name="project" value="LOCAL" />
       <updated>1762370138218</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="add UserRefreshTokenDto">
+      <option name="closed" value="true" />
+      <created>1762372190786</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1762372190786</updated>
+    </task>
+    <task id="LOCAL-00048" summary="начал делать метод для обновления refresh token">
+      <option name="closed" value="true" />
+      <created>1762372389992</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1762372389992</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -652,8 +666,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="добавил новый репозиторий, пытаюсь запустить post запрос" />
-    <MESSAGE value="думаю над сервисом и опять поменял модель данных" />
     <MESSAGE value="доделал сервис + немного поменял модель" />
     <MESSAGE value="смог зарегать первых пользователей" />
     <MESSAGE value="add ExceptionMiddleware" />
@@ -677,7 +689,9 @@
     <MESSAGE value="add jwtservice" />
     <MESSAGE value="change JwtService" />
     <MESSAGE value="add mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="add mapper" />
+    <MESSAGE value="add UserRefreshTokenDto" />
+    <MESSAGE value="начал делать метод для обновления refresh token" />
+    <option name="LAST_COMMIT_MESSAGE" value="начал делать метод для обновления refresh token" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
