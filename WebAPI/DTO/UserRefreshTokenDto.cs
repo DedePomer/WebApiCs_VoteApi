@@ -8,5 +8,5 @@ public class UserRefreshTokenDto
     public string? Username { get; init; }
     
     [Required]
-    public byte[]? RefreshTokenHash { get; init; }
+    public string? RefreshTokenHash { get; init; }
 }

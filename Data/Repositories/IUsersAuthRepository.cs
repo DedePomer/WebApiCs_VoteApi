@@ -10,4 +10,5 @@ public interface IUsersAuthRepository
     Task<Guid> GetUserIdAsync(string userName);
     Task<UsersAuthEntity> GetUserByIdAsync(Guid userId);
     Task SetRefreshToken(string username, string refreshToken);
+    Task<bool> TokenHashIsCorrect(string username, string refreshToken);
 }

@@ -78,14 +78,22 @@ public class Program
 
         // обновление refresh token
         app.MapPost("/refresh-token" ,
-                async ([FromBody]UserRefreshTokenDto user) =>
+                async (UsersServices usersServices,[FromBody]UserRefreshTokenDto user) =>
                 {
                     if (!MiniValidator.TryValidate(user, out var errors))
                     {
                         return Results.BadRequest("Null field");
                     }
 
-                    return Results.Ok();
+                    if (await usersServices.IsUserExistAsync(user.Username!))
+                    {
+                        if (await usersServices.TokenCanRefresh(user.Username!,user.RefreshTokenHash!))
+                        {
+                            await usersServices.SetRefreshToken(user.Username!,user.RefreshTokenHash!);
+                        }
+                    }
+
+                    return Results.Unauthorized();
                 });
         
         // проголосовать

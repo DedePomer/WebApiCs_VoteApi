@@ -16,6 +16,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -258,7 +260,7 @@
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
       <workItem from="1762345830366" duration="18847000" />
-      <workItem from="1762388605360" duration="455000" />
+      <workItem from="1762388605360" duration="2375000" />
     </task>
     <task id="LOCAL-00001" summary="+">
       <option name="closed" value="true" />
@@ -644,7 +646,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762372389992</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="add IsUserExistAsync">
+      <option name="closed" value="true" />
+      <created>1762389075390</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1762389075390</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +676,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="доделал сервис + немного поменял модель" />
     <MESSAGE value="смог зарегать первых пользователей" />
     <MESSAGE value="add ExceptionMiddleware" />
     <MESSAGE value="add UserDto" />
@@ -691,7 +700,8 @@
     <MESSAGE value="add mapper" />
     <MESSAGE value="add UserRefreshTokenDto" />
     <MESSAGE value="начал делать метод для обновления refresh token" />
-    <option name="LAST_COMMIT_MESSAGE" value="начал делать метод для обновления refresh token" />
+    <MESSAGE value="add IsUserExistAsync" />
+    <option name="LAST_COMMIT_MESSAGE" value="add IsUserExistAsync" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
