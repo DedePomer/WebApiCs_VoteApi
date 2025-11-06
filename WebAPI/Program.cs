@@ -2,6 +2,7 @@ using System.Net;
 using Data.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
 using MiniValidation;
 using WebAPI.DTO;
 using WebAPI.Extensions;
@@ -18,7 +19,38 @@ public class Program
         
 
         builder.Services.AddEndpointsApiExplorer();
-        builder.Services.AddSwaggerGen();
+        
+        builder.Services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+            // Добавляем схему безопасности — Bearer
+            c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+            {
+                Name = "Authorization",
+                Type = SecuritySchemeType.Http,
+                Scheme = "bearer",
+                BearerFormat = "JWT",
+                In = ParameterLocation.Header,
+                Description = "Введите JWT токен в формате: Bearer {token}"
+            });
+
+            // Добавляем требование безопасности
+            c.AddSecurityRequirement(new OpenApiSecurityRequirement
+            {
+                {
+                    new OpenApiSecurityScheme
+                    {
+                        Reference = new OpenApiReference
+                        {
+                            Type = ReferenceType.SecurityScheme,
+                            Id = "Bearer"
+                        }
+                    },
+                    Array.Empty<string>()
+                }
+            });
+        });
 
         builder.Services.AddAuth(configuration);
         builder.Services.AddDataBase(configuration);
@@ -59,9 +91,7 @@ public class Program
                 {
                     if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))
                     {
-                        // return Results
-                        //     .Ok(CandidateMapper
-                        //         .ToDto(await candidatesService.GetCandidatesAsync()));
+
                         var userDataType = UserAuthMapper.ToDataType(user);
                         
                         var refreshToken = jwtService.GenerateRefreshToken(userDataType);
@@ -78,7 +108,7 @@ public class Program
 
         // обновление refresh token
         app.MapPost("/refresh-token" ,
-                async (UsersServices usersServices,[FromBody]UserRefreshTokenDto user) =>
+                async (JwtService jwtService,UsersServices usersServices,[FromBody]UserRefreshTokenDto user) =>
                 {
                     if (!MiniValidator.TryValidate(user, out var errors))
                     {
@@ -89,12 +119,28 @@ public class Program
                     {
                         if (await usersServices.TokenCanRefresh(user.Username!,user.RefreshTokenHash!))
                         {
-                            await usersServices.SetRefreshToken(user.Username!,user.RefreshTokenHash!);
+                            var userDataType = UserAuthMapper.ToDataType(user);
+                            var refreshToken = jwtService.GenerateRefreshToken(userDataType);
+
+                            await usersServices.SetRefreshToken(user.Username!, refreshToken);
+                            
+                            return Results.Ok(refreshToken);
                         }
                     }
 
                     return Results.Unauthorized();
                 });
+
+        // получение списка кандидатов
+        app.MapGet("login", async (CandidatesService candidatesService) =>
+            {
+                var candidates = CandidateMapper.ToDto(await candidatesService.GetCandidatesAsync());
+                
+                return Results.Ok(candidates);
+            })
+        .RequireAuthorization(policy => 
+            policy.AddAuthenticationSchemes("AccessScheme")
+                .RequireAuthenticatedUser());
         
         // проголосовать
         // app.MapPost("/vote",

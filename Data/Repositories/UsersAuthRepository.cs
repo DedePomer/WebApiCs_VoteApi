@@ -68,6 +68,7 @@ public class UsersAuthRepository(VoteDbContext context) : IUsersAuthRepository
         user.RefreshTokenHash = HashHelper.GetHashByString(refreshToken);
 
         await context.SaveChangesAsync();
+        
     }
 
     public async Task<bool> TokenHashIsCorrect(string username, string refreshToken)

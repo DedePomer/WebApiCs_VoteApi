@@ -16,9 +16,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/DataTypes/JwtOptions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/DataTypes/JwtOptions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Mappers/UserAuthMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Mappers/UserAuthMapper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApiCs_VoteApi.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/WebApiCs_VoteApi.sln.DotSettings.user" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,26 +80,24 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e1f19886fe3354963a4a790c896b3f99689fd7a5/src/libraries/System.Private.CoreLib/src/System/ArgumentNullException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3e6cfa91023d4528a577156f118914ae141b0/89/1a940d07/JwtSecurityTokenHandler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a9ce663431c24c9aba988159f5e36465291420/6d/f45f99e9/DbContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2f2b1d92f1ffcf2dabd664473f8c9dafa6039595ac228ce4b75a0f1619c5991/AsyncTaskMethodBuilderT.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Common/Helpers/HashHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/UsersAuthConfigurations.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/Configurations/VotesConfiguration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/DataBase/VoteDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Data/Model/Entity/CandidatesEntity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/CandidatesEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersAuthEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/UsersDataEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Model/Entity/VotesEntity.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Data/Repositories/ICandidatesRepository.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IUsersDataRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Data/Repositories/UsersAuthRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/CandidateDataType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Infrastructure/DataTypes/CandidateDataType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/Infrastructure/DataTypes/CandidateDataType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/JwtOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/UserAuthDataType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/UserDataDataType.cs" root0="FORCE_HIGHLIGHTING" />
@@ -111,15 +113,10 @@
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/AuthExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/DataBaseExtension.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Extensions/ServicesExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Mappers/UserAuthMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/Works/C#/WebApiCs_VoteApi/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -137,34 +134,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.WebAPI: https.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CodeLensConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
+    ".NET Launch Settings Profile.WebAPI: https.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;mysql_aurora&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql_aurora"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;C#&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "C#"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: https">
     <configuration name="Data" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -260,15 +257,7 @@
       <workItem from="1762281885687" duration="1242000" />
       <workItem from="1762283189810" duration="688000" />
       <workItem from="1762345830366" duration="18847000" />
-      <workItem from="1762388605360" duration="2375000" />
-    </task>
-    <task id="LOCAL-00001" summary="+">
-      <option name="closed" value="true" />
-      <created>1761975037232</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1761975037232</updated>
+      <workItem from="1762388605360" duration="5661000" />
     </task>
     <task id="LOCAL-00002" summary="+">
       <option name="closed" value="true" />
@@ -654,7 +643,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762389075390</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="добавил проверку токена">
+      <option name="closed" value="true" />
+      <created>1762391038647</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1762391038647</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -676,7 +673,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="смог зарегать первых пользователей" />
     <MESSAGE value="add ExceptionMiddleware" />
     <MESSAGE value="add UserDto" />
     <MESSAGE value="add IsUserExist" />
@@ -701,7 +697,8 @@
     <MESSAGE value="add UserRefreshTokenDto" />
     <MESSAGE value="начал делать метод для обновления refresh token" />
     <MESSAGE value="add IsUserExistAsync" />
-    <option name="LAST_COMMIT_MESSAGE" value="add IsUserExistAsync" />
+    <MESSAGE value="добавил проверку токена" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил проверку токена" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -719,17 +716,17 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebAPI/Program.cs</url>
-          <line>59</line>
-          <properties documentPath="D:\Works\C#\WebApiCs_VoteApi\WebAPI\Program.cs" containingFunctionPresentation="Lambda expression inside Method 'Main'">
+          <url>file://$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs</url>
+          <line>46</line>
+          <properties documentPath="D:\Works\C#\WebApiCs_VoteApi\Infrastructure\Services\UsersServices.cs" containingFunctionPresentation="Method 'TokenDataCheking'">
             <startOffsets>
-              <option value="1643" />
+              <option value="1743" />
             </startOffsets>
             <endOffsets>
-              <option value="1715" />
+              <option value="1765" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="16" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -48,7 +48,7 @@ public class UsersServices(IUsersAuthRepository usersAuthRepository, IUsersDataR
         {
             var exp = DateTimeOffset.FromUnixTimeSeconds((long)expClaim);
             
-            return (exp <= DateTimeOffset.Now) && (jwtToken.Claims.First(c=>c.Type == "username").Value == username);
+            return (exp <= DateTimeOffset.UtcNow) && (jwtToken.Claims.First(c=>c.Type == "username").Value == username);
         }
         else
         {

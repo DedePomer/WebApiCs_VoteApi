@@ -12,4 +12,12 @@ public static class UserAuthMapper
             Username = userDto.UserName,
         };
     }
+    
+    public static UserAuthDataType ToDataType(UserRefreshTokenDto userDto)
+    {
+        return new UserAuthDataType()
+        {
+            Username = userDto.Username,
+        };
+    }
 }
