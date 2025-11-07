@@ -13,5 +13,9 @@ public class UsersAuthConfigurations:IEntityTypeConfiguration<UsersAuthEntity>
         builder
             .HasOne(e => e.Data)
             .WithOne(e => e.User);
+
+        builder
+            .HasIndex(u => u.Username)
+            .IsUnique();
     }
 }

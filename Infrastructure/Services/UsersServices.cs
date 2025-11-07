@@ -27,7 +27,7 @@ public class UsersServices(IUsersAuthRepository usersAuthRepository, IUsersDataR
         if (await IsUserExistAsync(userName))
         {
             Guid userId = await usersAuthRepository.GetUserIdAsync(userName);
-            return (await votesRepository.IsUserVotedAsync(userId));
+            return !(await votesRepository.IsUserVotedAsync(userId));
         }
         throw new NoDataFoundException();
     }
