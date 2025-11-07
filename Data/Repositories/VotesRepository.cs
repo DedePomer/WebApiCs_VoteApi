@@ -15,7 +15,7 @@ public class VotesRepository(VoteDbContext context) : IVotesRepository
         return isVote;
     }
 
-    public async Task Vote(Guid candidateId, Guid userId)
+    public async Task VoteAsync(Guid candidateId, Guid userId)
     {
         var query = context.Votes;
 

@@ -14,9 +14,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +105,7 @@
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Services/VotseService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -259,15 +263,7 @@
       <workItem from="1762396638717" duration="407000" />
       <workItem from="1762397092389" duration="37000" />
       <workItem from="1762397153918" duration="659000" />
-      <workItem from="1762518498533" duration="1049000" />
-    </task>
-    <task id="LOCAL-00003" summary="+">
-      <option name="closed" value="true" />
-      <created>1761975086046</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1761975086046</updated>
+      <workItem from="1762518498533" duration="2160000" />
     </task>
     <task id="LOCAL-00004" summary="основная структура">
       <option name="closed" value="true" />
@@ -653,7 +649,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762394329503</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса">
+      <option name="closed" value="true" />
+      <created>1762519619823</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1762519619823</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -675,7 +679,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add UserDto" />
     <MESSAGE value="add IsUserExist" />
     <MESSAGE value="аунтификация заработала" />
     <MESSAGE value="add votesentity" />
@@ -700,7 +703,8 @@
     <MESSAGE value="add IsUserExistAsync" />
     <MESSAGE value="добавил проверку токена" />
     <MESSAGE value="добавил вывод кандидатова" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил вывод кандидатова" />
+    <MESSAGE value="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса" />
+    <option name="LAST_COMMIT_MESSAGE" value="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

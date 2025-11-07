@@ -13,7 +13,6 @@ public static class CandidateMapper
         {
             candidatesDto.Add(new CandidateDto()
             {
-                Id = c.Id,
                 Name = c.User.Data.FirstName,
                 Surname=c.User.Data.Surname,
                 Program = c.Program,
