@@ -26,4 +26,13 @@ public class UsersDataRepository(VoteDbContext context) : IUsersDataRepository
         
         return query.FirstAsync(d=> d.UserId == userId);
     }
+
+    public async Task<Guid> GetUserIdByFirstNameAsync(string firstName)
+    {
+        var query = context.UsersData.AsNoTracking();
+
+        var uaerData = await query.FirstAsync(d => d.FirstName == firstName);
+
+        return uaerData.UserId;
+    }
 }

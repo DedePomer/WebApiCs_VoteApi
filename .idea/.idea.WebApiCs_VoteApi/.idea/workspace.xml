@@ -16,10 +16,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersDataRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/DataTypes/CandidateDataType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/DataTypes/CandidateDataType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/VotseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/VotesService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,35 +140,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.WebAPI: https.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4883721&quot;,
-    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
+    ".NET Launch Settings Profile.WebAPI: https.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "XThreadsFramesViewSplitterKey": "0.4883721",
+    "deletionFromPopupRequiresConfirmation": "false",
+    "git-widget-placeholder": "dev",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;,
-      &quot;mysql_aurora&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql",
+      "mysql_aurora"
     ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;C#&quot;
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "C#"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: https">
     <configuration name="Data" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -263,15 +270,7 @@
       <workItem from="1762396638717" duration="407000" />
       <workItem from="1762397092389" duration="37000" />
       <workItem from="1762397153918" duration="659000" />
-      <workItem from="1762518498533" duration="2160000" />
-    </task>
-    <task id="LOCAL-00004" summary="основная структура">
-      <option name="closed" value="true" />
-      <created>1761975396274</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1761975396274</updated>
+      <workItem from="1762518498533" duration="6923000" />
     </task>
     <task id="LOCAL-00005" summary="+">
       <option name="closed" value="true" />
@@ -657,7 +656,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762519619823</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="сделал VoteAsync">
+      <option name="closed" value="true" />
+      <created>1762520767982</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1762520767982</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +686,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add IsUserExist" />
     <MESSAGE value="аунтификация заработала" />
     <MESSAGE value="add votesentity" />
     <MESSAGE value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
@@ -704,7 +710,8 @@
     <MESSAGE value="добавил проверку токена" />
     <MESSAGE value="добавил вывод кандидатова" />
     <MESSAGE value="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса" />
-    <option name="LAST_COMMIT_MESSAGE" value="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса" />
+    <MESSAGE value="сделал VoteAsync" />
+    <option name="LAST_COMMIT_MESSAGE" value="сделал VoteAsync" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -25,4 +25,13 @@ public class CandidatesRepository(VoteDbContext context) : ICandidatesRepository
 
         return candidateId;
     }
+
+    public async Task<Guid> GetUserIdAsync(Guid candidateId)
+    {
+        var query = context.Candidates.AsNoTracking();
+
+        var candidate = await query.FirstAsync(c => c.CandidateId == candidateId);
+        
+        return candidate.UserId;
+    }
 }

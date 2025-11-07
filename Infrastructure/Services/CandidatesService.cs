@@ -24,7 +24,7 @@ public class CandidatesService(ICandidatesRepository candidatesRepository, IUser
             {
                 User = userDataType ,
                 Program = c.Program ,
-                Id = count++,
+                Id = c.CandidateId,
             });
         }
 

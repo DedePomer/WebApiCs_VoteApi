@@ -1,4 +1,5 @@
 using System.Net;
+using System.Runtime.InteropServices;
 using Data.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -131,21 +132,27 @@ public class Program
                 var candidates = CandidateMapper.ToDto(await candidatesService.GetCandidatesAsync());
                 
                 return Results.Ok(candidates);
-            })
-        .RequireAuthorization(policy => 
+            }).RequireAuthorization(policy => 
             policy.AddAuthenticationSchemes("AccessScheme")
                 .RequireAuthenticatedUser());
         
         // проголосовать
         app.MapPost("/{name}/vote",
-            async (HttpContext context,CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
+            async (HttpContext context,VotesService votesService, [FromBody]Guid candidateId) =>
             {
                 var user = context.User;
-                string name = user.FindFirst("username")?.Value ?? "default";
+                string? username = user.FindFirst("username")?.Value;
                 
                 
-            })
-        .RequireAuthorization(policy => 
+                if (username is null)
+                {
+                    return Results.BadRequest("Null field");
+                }
+                
+                await votesService.VoteAsync(username, candidateId);
+                
+                return Results.Ok();
+            }).RequireAuthorization(policy => 
             policy.AddAuthenticationSchemes("AccessScheme")
                 .RequireAuthenticatedUser());
         

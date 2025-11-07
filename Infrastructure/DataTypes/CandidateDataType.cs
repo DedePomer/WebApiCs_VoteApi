@@ -2,7 +2,7 @@
 
 public class CandidateDataType
 {
-    public int? Id { get; set; }
+    public Guid? Id { get; set; }
     public  UserAuthDataType? User { get; set; }
     public string? Program { get; set; }
 }
