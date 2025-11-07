@@ -19,18 +19,16 @@ public class CandidatesRepository(VoteDbContext context) : ICandidatesRepository
     {
         var query = context.Candidates.AsNoTracking();
 
-        var candidate = await query.FirstAsync(c => c.UserId == userId);
-        
-        Guid candidateId = candidate.CandidateId;
+        CandidatesEntity candidate = await query.FirstAsync(c => c.UserId == userId);
 
-        return candidateId;
+        return candidate.CandidateId;
     }
 
     public async Task<Guid> GetUserIdAsync(Guid candidateId)
     {
         var query = context.Candidates.AsNoTracking();
 
-        var candidate = await query.FirstAsync(c => c.CandidateId == candidateId);
+        CandidatesEntity candidate = await query.FirstAsync(c => c.CandidateId == candidateId);
         
         return candidate.UserId;
     }

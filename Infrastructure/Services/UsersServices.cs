@@ -1,5 +1,6 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using Data.Repositories;
+using Infrastructure.Exceptions;
 
 namespace Infrastructure.Services;
 
@@ -23,8 +24,12 @@ public class UsersServices(IUsersAuthRepository usersAuthRepository, IUsersDataR
     
     public async Task<bool> UserCanVoteAsync(string userName, string password)
     {
-        Guid userId = await usersAuthRepository.GetUserIdAsync(userName);
-        return !(await votesRepository.IsUserVotedAsync(userId));
+        if (await IsUserExistAsync(userName))
+        {
+            Guid userId = await usersAuthRepository.GetUserIdAsync(userName);
+            return (await votesRepository.IsUserVotedAsync(userId));
+        }
+        throw new NoDataFoundException();
     }
     public async Task SetRefreshToken(string username, string refreshToken)
     {

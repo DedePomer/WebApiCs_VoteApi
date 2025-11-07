@@ -8,7 +8,6 @@ public class VotesService(IUsersDataRepository usersDataRepository, ICandidatesR
     public async Task VoteAsync(string username, Guid candidateId)
     {
         Guid userId = await usersRepository.GetUserIdAsync(username);
-
         
         await votesRepository.VoteAsync(userId, candidateId);
     }
