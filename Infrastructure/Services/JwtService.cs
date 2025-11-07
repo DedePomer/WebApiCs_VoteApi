@@ -37,7 +37,7 @@ public class JwtService
     
     public string GenerateAccessToken(UserAuthDataType userAuthData)
     {
-        return GenerateToken(new  Claim[]
+        return GenerateToken(new []
         {
             new Claim("username", userAuthData.Username),
             new Claim("type", "access"),
@@ -46,7 +46,7 @@ public class JwtService
     
     public string GenerateRefreshToken(UserAuthDataType userAuthData)
     {
-        return GenerateToken(new  Claim[]
+        return GenerateToken(new []
         {
             new Claim("username", userAuthData.Username),
             new Claim("type", "refresh"),

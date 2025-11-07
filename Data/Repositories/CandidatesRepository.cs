@@ -10,7 +10,7 @@ public class CandidatesRepository(VoteDbContext context) : ICandidatesRepository
     {
         var query = context.Candidates.AsNoTracking();
         
-        List<CandidatesEntity>  candidates = await query.ToListAsync();
+        List<CandidatesEntity> candidates = await query.ToListAsync();
         
         return candidates;
     }

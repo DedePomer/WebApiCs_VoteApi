@@ -15,18 +15,9 @@
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/CandidatesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/ICandidatesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IUsersAuthRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/IVotesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/UsersDataRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/UsersDataRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Repositories/VotesRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/DataTypes/CandidateDataType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/DataTypes/CandidateDataType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/VotseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/VotesService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Mappers/CandidateMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,6 +96,7 @@
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/JwtOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/UserAuthDataType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/DataTypes/UserDataDataType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Exceptions/NoDataFoundException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Mappers/CandidateMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Mappers/UserAuthMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Mappers/UserDataMapper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -112,7 +104,7 @@
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/JwtService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Infrastructure/Services/UsersServices.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Infrastructure/Services/VotseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Infrastructure/Services/VotesService.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/CandidateDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/DTO/UserRefreshTokenDto.cs" root0="FORCE_HIGHLIGHTING" />
@@ -270,15 +262,7 @@
       <workItem from="1762396638717" duration="407000" />
       <workItem from="1762397092389" duration="37000" />
       <workItem from="1762397153918" duration="659000" />
-      <workItem from="1762518498533" duration="6923000" />
-    </task>
-    <task id="LOCAL-00005" summary="+">
-      <option name="closed" value="true" />
-      <created>1761975421566</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1761975421566</updated>
+      <workItem from="1762518498533" duration="8454000" />
     </task>
     <task id="LOCAL-00006" summary="опять всё меняю (решил работать с трёхслойкой)">
       <option name="closed" value="true" />
@@ -664,7 +648,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762520767982</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="заработало">
+      <option name="closed" value="true" />
+      <created>1762526228169</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1762526228169</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -686,7 +678,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="аунтификация заработала" />
     <MESSAGE value="add votesentity" />
     <MESSAGE value="добавил новый репозиторий но столкнулся с проблемой. надо менять модель (опять)" />
     <MESSAGE value="+ migrations" />
@@ -711,7 +702,8 @@
     <MESSAGE value="добавил вывод кандидатова" />
     <MESSAGE value="начал делать метод черезз который будет идти голосование + сделал метод в репозитории для записи голоса" />
     <MESSAGE value="сделал VoteAsync" />
-    <option name="LAST_COMMIT_MESSAGE" value="сделал VoteAsync" />
+    <MESSAGE value="заработало" />
+    <option name="LAST_COMMIT_MESSAGE" value="заработало" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -740,6 +732,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs</url>
+          <line>38</line>
+          <properties documentPath="D:\Works\C#\WebApiCs_VoteApi\Infrastructure\Services\CandidatesService.cs" containingFunctionPresentation="Method 'GetCandidatesAsync'">
+            <startOffsets>
+              <option value="1359" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1384" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

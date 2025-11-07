@@ -1,7 +1,9 @@
 ﻿using Data.Model.Entity;
 using Data.Repositories;
 using Infrastructure.DataTypes;
+using Infrastructure.Exceptions;
 using Infrastructure.Mappers;
+using Microsoft.EntityFrameworkCore.Update;
 
 namespace Infrastructure.Services;
 
@@ -9,7 +11,6 @@ public class CandidatesService(ICandidatesRepository candidatesRepository, IUser
 {
     private async Task<List<CandidateDataType>> FillInformation(List<CandidatesEntity> candidatesEntity)
     {
-        int count = 0;
         List<CandidateDataType> candidatesDataType = new ();
         
         foreach (var c in candidatesEntity)
@@ -34,7 +35,12 @@ public class CandidatesService(ICandidatesRepository candidatesRepository, IUser
     public async Task<List<CandidateDataType>> GetCandidatesAsync()
     {
         var candidate = await candidatesRepository.GetCandidatesAsync();
-        
+
+        if (candidate.Count == 0)
+        {
+            throw new NoDataFoundException();
+        }
+
         return await FillInformation(candidate);
     }
 }
