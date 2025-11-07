@@ -22,9 +22,8 @@ public class Program
         
         builder.Services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-
-            // Добавляем схему безопасности — Bearer
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "Vote Service", Version = "v1" });
+            
             c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
             {
                 Name = "Authorization",
@@ -34,8 +33,7 @@ public class Program
                 In = ParameterLocation.Header,
                 Description = "Введите JWT токен в формате: Bearer {token}"
             });
-
-            // Добавляем требование безопасности
+            
             c.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
@@ -55,10 +53,6 @@ public class Program
         builder.Services.AddAuth(configuration);
         builder.Services.AddDataBase(configuration);
         builder.Services.AddServices(configuration);
-
-
-        // builder.Services.AddLogging();
-        // builder.Logging.ClearProviders();
         
         
         var app = builder.Build();
@@ -132,7 +126,7 @@ public class Program
                 });
 
         // получение списка кандидатов
-        app.MapGet("login", async (CandidatesService candidatesService) =>
+        app.MapGet("/login", async (CandidatesService candidatesService) =>
             {
                 var candidates = CandidateMapper.ToDto(await candidatesService.GetCandidatesAsync());
                 
@@ -143,14 +137,17 @@ public class Program
                 .RequireAuthenticatedUser());
         
         // проголосовать
-        // app.MapPost("/vote",
-        //     async (CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
-        //     {
-        //         
-        //     })
-        // .RequireAuthorization(policy => 
-        //     policy.AddAuthenticationSchemes("AccessScheme")
-        //         .RequireAuthenticatedUser());
+        app.MapPost("/{name}/vote",
+            async (HttpContext context,CandidatesService candidatesService, UsersServices usersServices, [FromBody]CandidateDto candidate) =>
+            {
+                var user = context.User;
+                string name = user.FindFirst("username")?.Value ?? "default";
+                
+                
+            })
+        .RequireAuthorization(policy => 
+            policy.AddAuthenticationSchemes("AccessScheme")
+                .RequireAuthenticatedUser());
         
         app.Run();
     }

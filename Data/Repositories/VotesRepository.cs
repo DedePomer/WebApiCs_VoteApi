@@ -1,4 +1,5 @@
 ﻿using Data.DataBase;
+using Data.Model.Entity;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data.Repositories;
@@ -12,5 +13,18 @@ public class VotesRepository(VoteDbContext context) : IVotesRepository
         bool isVote = await query.AnyAsync(v=>v.UserId == userId);
         
         return isVote;
+    }
+
+    public async Task Vote(Guid candidateId, Guid userId)
+    {
+        var query = context.Votes;
+
+        await query.AddAsync(new VotesEntity()
+        {
+            CandidateId = candidateId,
+            UserId = userId,
+        });
+        
+        await context.SaveChangesAsync();
     }
 }
