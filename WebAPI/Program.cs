@@ -75,13 +75,13 @@ public class Program
         
         // аунтификация
         app.MapPost("/login",
-            async (JwtService jwtService, UsersServices usersServices, [FromBody]UserDto user) =>
+            async (JwtService jwtService, UsersServices usersServices,NotificationService notificationService, [FromBody]UserDto user) =>
             {
                 if (!MiniValidator.TryValidate(user, out var errors))
                 {
                     return Results.BadRequest("Validation failed");
                 }
-
+                
                 if (await usersServices.IsUserExistAsync(user.UserName!,user.Password!))
                 {
                     if (await usersServices.UserCanVoteAsync(user.UserName!,user.Password!))

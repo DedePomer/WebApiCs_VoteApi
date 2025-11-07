@@ -20,6 +20,6 @@ public static class ServicesExtensions
         services.AddScoped<CandidatesService>();
         services.AddScoped<JwtService>();
         services.AddScoped<VotesService>();
-
+        services.AddScoped<NotificationService>();
     }
 }
