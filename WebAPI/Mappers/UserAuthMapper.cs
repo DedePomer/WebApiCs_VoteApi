@@ -20,4 +20,13 @@ public static class UserAuthMapper
             Username = userDto.Username,
         };
     }
+
+    public static NotificationDataType ToDataType(UserDto userDto, string? messege)
+    {
+        return new NotificationDataType()
+        {
+            Username = userDto.UserName,
+            Text = messege,
+        };
+    }
 }

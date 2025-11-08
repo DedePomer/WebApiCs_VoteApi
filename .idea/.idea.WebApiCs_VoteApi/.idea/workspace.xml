@@ -14,8 +14,12 @@
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Extensions/ServicesExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Exceptions/NoDataFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Exceptions/NoDataFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/NotificationService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/NotificationService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Infrastructure/Services/VotesService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infrastructure/Services/VotesService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Mappers/UserAuthMapper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Mappers/UserAuthMapper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Middleware/ExceptionMiddleware.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,15 +268,8 @@
       <workItem from="1762397092389" duration="37000" />
       <workItem from="1762397153918" duration="659000" />
       <workItem from="1762518498533" duration="12761000" />
-      <workItem from="1762534551287" duration="1574000" />
-    </task>
-    <task id="LOCAL-00009" summary="как оказалось для EF инициализавтор не нужен">
-      <option name="closed" value="true" />
-      <created>1762195412112</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1762195412112</updated>
+      <workItem from="1762534551287" duration="2978000" />
+      <workItem from="1762601149207" duration="702000" />
     </task>
     <task id="LOCAL-00010" summary="добавил конфигурацию">
       <option name="closed" value="true" />
@@ -658,7 +655,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762530820673</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="добавил сервис для отправки озвещения">
+      <option name="closed" value="true" />
+      <created>1762536192226</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1762536192226</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -680,7 +685,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="+ migrations" />
     <MESSAGE value="UserCanVote сделан" />
     <MESSAGE value="add null validator" />
     <MESSAGE value="сделал candidaterepository" />
@@ -705,7 +709,8 @@
     <MESSAGE value="добавил exception" />
     <MESSAGE value="+" />
     <MESSAGE value="add unique" />
-    <option name="LAST_COMMIT_MESSAGE" value="add unique" />
+    <MESSAGE value="добавил сервис для отправки озвещения" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил сервис для отправки озвещения" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -734,19 +739,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Infrastructure/Services/CandidatesService.cs</url>
-          <line>38</line>
-          <properties documentPath="D:\Works\C#\WebApiCs_VoteApi\Infrastructure\Services\CandidatesService.cs" containingFunctionPresentation="Method 'GetCandidatesAsync'">
-            <startOffsets>
-              <option value="1359" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1384" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

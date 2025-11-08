@@ -1,6 +1,4 @@
-﻿using System.Net;
-
-namespace Infrastructure.Exceptions;
+﻿namespace Infrastructure.Exceptions;
 
 public class NoDataFoundException:Exception
 {

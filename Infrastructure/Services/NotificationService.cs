@@ -1,18 +1,23 @@
 ﻿using System.Text;
+using System.Text.Json;
 using Infrastructure.DataTypes;
 using RabbitMQ.Client;
-using System.Text.Json;
 
 namespace Infrastructure.Services;
 
 public class NotificationService
 {
+    private readonly string _defaultText = "Спасибо что проголосовали";
     private readonly string _exchange = "Notification.topic";
     private readonly string _localHost = "localhost";
     
     public async Task NotificateMyMessanger(NotificationDataType nootification)
     {
         const string routingKey = "test.mq.classic";
+        if (nootification.Text == null)
+        {
+            nootification.Text = _defaultText;
+        }
         await Notificate(nootification, routingKey);
     }
 
@@ -30,5 +35,4 @@ public class NotificationService
             routingKey: routingKey,   
             body: body);
     }
-    
 }

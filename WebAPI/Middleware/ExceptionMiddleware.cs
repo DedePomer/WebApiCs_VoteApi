@@ -1,5 +1,4 @@
 ﻿using Infrastructure.Exceptions;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace WebAPI.Middleware;
 

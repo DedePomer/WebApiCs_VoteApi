@@ -1,6 +1,3 @@
-using System.Net;
-using System.Runtime.InteropServices;
-using Data.Repositories;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
@@ -138,10 +135,10 @@ public class Program
         
         // проголосовать
         app.MapPost("/{name}/vote",
-            async (HttpContext context,VotesService votesService, [FromBody]Guid candidateId) =>
+            async (HttpContext context,VotesService votesService,NotificationService notificationService, [FromBody]Guid candidateId) =>
             {
-                var user = context.User;
-                string? username = user.FindFirst("username")?.Value;
+                var tokenData = context.User;
+                string? username = tokenData.FindFirst("username")?.Value;
                 
                 
                 if (username is null)
@@ -149,7 +146,10 @@ public class Program
                     return Results.BadRequest("Null field");
                 }
                 
+                var user = new UserDto(){UserName = username};
+                
                 await votesService.VoteAsync(username, candidateId);
+                await notificationService.NotificateMyMessanger(UserAuthMapper.ToDataType(user,null));
                 
                 return Results.Ok();
             }).RequireAuthorization(policy => 

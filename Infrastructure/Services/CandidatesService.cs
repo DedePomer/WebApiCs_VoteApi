@@ -3,7 +3,6 @@ using Data.Repositories;
 using Infrastructure.DataTypes;
 using Infrastructure.Exceptions;
 using Infrastructure.Mappers;
-using Microsoft.EntityFrameworkCore.Update;
 
 namespace Infrastructure.Services;
 
