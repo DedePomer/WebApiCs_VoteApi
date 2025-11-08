@@ -21,7 +21,7 @@ services:
   db:
     image: postgres:latest
     healthcheck:
-      test: ["CMD-SHELL", "PGPASSWORD=admin pg_isready -U admin -d postgres"]
+      test: ["CMD-SHELL", "PGPASSWORD=${POSTGRES_PASSWORD} pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
       interval: 5s
       timeout: 5s
       retries: 5  
