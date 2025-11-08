@@ -13,11 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83670a3c-207e-4441-9623-705668345d29" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/dataSources/144f1fc6-cf02-4af7-8468-5890307d1e83/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebApiCs_VoteApi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,15 +287,7 @@
       <workItem from="1762397153918" duration="659000" />
       <workItem from="1762518498533" duration="12761000" />
       <workItem from="1762534551287" duration="2978000" />
-      <workItem from="1762601149207" duration="3373000" />
-    </task>
-    <task id="LOCAL-00011" summary="add dbcontext to di">
-      <option name="closed" value="true" />
-      <created>1762197646789</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1762197646789</updated>
+      <workItem from="1762601149207" duration="3603000" />
     </task>
     <task id="LOCAL-00012" summary="добавил миграции">
       <option name="closed" value="true" />
@@ -685,7 +673,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762601884748</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="add dockerfile">
+      <option name="closed" value="true" />
+      <created>1762604821218</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1762604821218</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -707,7 +703,6 @@
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add null validator" />
     <MESSAGE value="сделал candidaterepository" />
     <MESSAGE value="всегда выдаёт you voted" />
     <MESSAGE value="данные получены" />
@@ -732,7 +727,8 @@
     <MESSAGE value="add unique" />
     <MESSAGE value="добавил сервис для отправки озвещения" />
     <MESSAGE value="добавил NotificationService в голосование" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил NotificationService в голосование" />
+    <MESSAGE value="add dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="add dockerfile" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
