@@ -28,7 +28,7 @@ docker compose up
 - Языки: C#;
 - Фреймворки: ASP.NET, Entity Fraemwork;
 - Паттереы: SOLID, репозиторий;
-- Другое: RebbitMQ, 
+- Другое: RebbitMQ; 
 
 
 ## Для себя
