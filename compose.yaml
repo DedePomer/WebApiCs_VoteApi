@@ -1,0 +1,9 @@
+﻿services:
+  
+  
+  api:
+    image: vote-webapi
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+

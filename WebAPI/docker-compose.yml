@@ -1,0 +1,47 @@
+﻿version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vote-api
+    ports:
+      - "8080:8080"          
+    depends_on:
+        db:
+          condition: service_healthy
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+      
+      ConnectionStrings__VoteDbContext: Host=db;Port=5432;Database=postgres;Username=admin;Password=admin
+    restart: always
+
+  db:
+    image: postgres:latest
+    healthcheck:
+      test: ["CMD-SHELL", "PGPASSWORD=admin pg_isready -U admin -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5  
+    container_name: my-db
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    volumes:
+      - ../Data/DbDamps/08-11-2025-dump.sql:/docker-entrypoint-initdb.d/dump.sql
+    ports:
+      - "5432:5432"
+    restart: always
+    
+
+
+
+      
+      
+
+
+  
+  

@@ -1,0 +1,21 @@
+# This is a generated file. Not intended for manual editing.
+version: "3.9"
+services:
+  api:
+    build:
+      context: "D:\\Works\\C#\\WebApiCs_VoteApi\\WebAPI"
+      dockerfile: "Dockerfile"
+      target: "base"
+    command: []
+    entrypoint:
+    - "dotnet"
+    - "/app/bin/Debug/net9.0/WebAPI.dll"
+    environment:
+      DOTNET_USE_POLLING_FILE_WATCHER: "true"
+    image: "webapi:dev"
+    ports: []
+    volumes:
+    - "D:\\Works\\C#\\WebApiCs_VoteApi\\WebAPI:/app:rw"
+    - "D:\\Works\\C#\\WebApiCs_VoteApi:/src:rw"
+    - "C:\\Users\\t343s\\.nuget\\packages:/root/.nuget/packages"
+    working_dir: "/app"
